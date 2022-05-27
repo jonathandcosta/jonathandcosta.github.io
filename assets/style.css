@@ -625,11 +625,13 @@ p {
 	#about .col-right {
 		text-align: left;
 		padding: 30px;
-		width: 10%;
+		/*width: 10%;*/
+
 	}
 	#about .col-right h1 {
 		text-align: justify;
 		color: white;
+
 	}
 
 	/* contact  */
