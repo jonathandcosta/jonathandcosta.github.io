@@ -566,7 +566,7 @@ p {
 }
 
 /* responsividade tablet*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 460px) {
 	.cta {
 		font-size: 2.5rem;
 		padding: 20px 60px;
