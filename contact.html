@@ -3,20 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/style.css">
-  <title>Jonathan D. Costa</title>
+
+  <title>contato</title>
 </head>
 
 <body>
-  <!-- sessão header-->
+  <!--- header--->
   <header>
     <section id="header">
       <div class="header container">
         <div class="nav-bar">
           <div class="brand">
-            <a href="#hero">
+            <a href="./index.html">
               <h1><span>J</span>onathan <span>C</span>osta</h1>
             </a>
           </div>
@@ -27,7 +29,7 @@
             <ul>
               <li><a href="https://github.com/jonathandcosta" target="_blank" data-after="Home">Github</a></li>
               <li><a href="https://www.linkedin.com/in/jonathanduartecosta/" target="_blank" data-after="Service">LinkedIn</a></li>
-              <li><a href="./contact.html" data-after="Contact">Contato</a></li>
+              <li><a href="./projects.html" data-after="Service">Projetos</a></li>
             </ul>
           </div>
         </div>
@@ -35,39 +37,68 @@
     </section>
   </header>
 
-  <!-- sessão HERO-->
-  <section id="hero">
-    <div class="hero container">
+  <!-- sessão contato-->
+  <section id="contact">
+    <div class="contact container">
       <div>
-        <h1>Olá, <span></span></h1>
-        <h1>Meu nome é <span></span></h1>
-        <h1>Jonathan <span></span></h1>
-        <a href="./projects.html" type="button" class="cta">Projetos</a>
+        <h1 class="section-title">Contato <span>info</span></h1>
       </div>
-    </div>
-  </section>
-
-  <!-- sessão sobre-->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-          <img src="./assets/img/preferida.jpg" alt="img">
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="./assets/icons/call.png" /></div>
+          <div class="contact-info">
+            <h1>Celular</h1>
+            <h2>+55 84 9 9904 3539</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <a href="mailto:jddatsoc@gmail.com" target="_blank" data-after="Contact">
+            <div class="icon"><img src="./assets/icons/email.png" /></div>
+            <div class="contact-info">
+              <h1>Email</h1>
+              <h2>jddatsoc@gmail.com</h2>
+          </a>
         </div>
       </div>
-      <div class="col-right">
-        <h1 class="section-title">Sobre <span>mim</span></h1>
-        <h1>Futuro Desenvolvedor</h1>
-        <h1>Olá, espero que esteja tudo bem com você. Me chamo Jonathan, tenho 37 anos, sou casado e tenho dois maravilhosos filhos. Atualmente sou universitário cursando ciência da computação na UNP-RN. Hoje meu objetivo principal é em ajudar pessoas, ajuda-las a acessar com mais facilidade os serviços de um site, seja para realizar uma compra, ter uma melhor visibilidade de outros serviços e facilitar seu dia-a-dia, auxiliar em qualquer coisa que para esta seja importante.</br></br>Iniciei minha transição de carreira em setembro/2021, a partir deste momento decidi que não mais atuaria na area comercial e decidi ser uma melhor pessoa e profissional para que em algum momento eu use de meus conhecimentos para transformar a vida de alguém, então com minha rede de apoio e incetivos de amigos, comecei a estudar e me dedicar a programação.
-        </h1>
-        <a href="https://www.linkedin.com/in/jonathandatsoc/" target="_blank" class="cta">Saiba mais</a>
+      <div class="contact-item">
+        <div class="icon"><img src="./assets/icons/linkedin.png" /></div>
+        <div class="contact-info">
+          <h1>LinkedIn</h1>
+          <h2>Jonathan D Costa</h2>
+        </div>
       </div>
+    </div>
     </div>
   </section>
 
+  <!-- fomrmulário para contato-->
+  <div class="form_content">
+    <form action="https://formsubmit.co/ad0acce6fe9d77e1d2504393e4547876" method="post" target="_blank">
+      <input type="hidden" name="_captcha" value="false">
+      <div>
+        <h2 class="section-title">Deixe <span>o </span>seu <span>contato</span></h2>
+      </div>
+      <div class="contato-dados">
+        <div>
+          <label for=" nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="nome@mail.com" required>
+        </div>
+        <div>
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(DDD) 9 9999-9999" required>
+        </div>
+        <div class="botao">
+          <button>Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
 
-
-  <!-- sessão footer-->
+  <!--- Footer--->
   <footer>
     <section id="footer">
       <div class="footer container">
@@ -96,9 +127,6 @@
       </div>
     </section>
   </footer>
-
-  <!-- Script JavaScript-->
-  <script src="./assets/app.js"></script>
 </body>
 
 </html>
