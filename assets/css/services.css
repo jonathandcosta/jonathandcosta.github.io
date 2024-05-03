@@ -65,15 +65,6 @@
 }
 
 
-@media only screen and (min-width: 768px) {
-
-  #services .service-bottom .service-item {
-    /* flex-basis: 45%;
-    margin: 2.5%; */
-  }
-}
-
-
 /* responsividade Desktop */
 @media only screen and (min-width: 1200px) {
   #services .service-bottom .service-item {
