@@ -1,5 +1,5 @@
 /*global*/
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;700&display=swap');
 
 @import url(./assets/css/header.css);
 @import url(./assets/css/hero.css);
@@ -16,7 +16,7 @@
 }
 html {
   font-size: 10px;
-  font-family: "Jura", sans-serif;
+  font-family: 'Jura', sans-serif;
   scroll-behavior: smooth;
   /*background-color: #000;*/
   background-image: linear-gradient(60deg, #717171 0%, #000 100%);
@@ -55,13 +55,12 @@ button {
   padding: 10px;
   border-radius: 10px;
   margin-top: 30px;
- }
- button:hover {
+}
+button:hover {
   color: white;
   background-color: red;
   cursor: pointer;
- }
-
+}
 
 /*tittle sections*/
 .section-title {
@@ -87,11 +86,11 @@ button {
   color: red;
 }
 
-
-
-
-
-
+@media only screen and (min-width: 375px) and (max-width: 896px) {
+  .brand h1 {
+    font-size: 2.5rem;
+  }
+}
 
 /* responsividade tablet*/
 @media only screen and (min-width: 768px) {
@@ -99,4 +98,3 @@ button {
     font-size: 6rem;
   }
 }
-
