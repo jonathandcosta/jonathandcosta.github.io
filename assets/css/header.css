@@ -70,8 +70,6 @@
   color: red;
 }
 
-
-
 /*hambuguer*/
 #header .hamburger {
   height: 60px;
@@ -91,7 +89,7 @@
 
 #header .hamburger:after {
   position: absolute;
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -109,7 +107,7 @@
 
 #header .hamburger .bar::after,
 #header .hamburger .bar::before {
-  content: "";
+  content: '';
   position: absolute;
   height: 100%;
   width: 100%;
@@ -160,11 +158,10 @@
 }
 @keyframes text_reveal_name {
   100% {
-    color: red;
+    color: white;
     font-weight: 500;
   }
 }
-
 
 /* responsividade Desktop */
 @media only screen and (min-width: 1200px) {

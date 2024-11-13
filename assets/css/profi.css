@@ -1,0 +1,47 @@
+.profissional {
+  background-color: #454545;
+}
+
+.why {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.whyNot h1 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.whyNot h2 {
+  padding: 10px 0px;
+  font-size: 16px;
+  color: #cecece;
+  border-bottom: solid 1px #454545;
+}
+
+.whyNot span {
+  margin-right: 10px;
+  color: red;
+  font-size: 250x;
+}
+
+b {
+  color: #fff;
+  font-weight: 900;
+}
+
+.answer {
+  width: 400px;
+  padding: 40px;
+  border: solid 2px #fff;
+  border-radius: 18px;
+  text-align: justify;
+  background-color: #464646;
+}
+
+.answer p {
+  margin-bottom: 15px;
+  font-weight: 100;
+}
