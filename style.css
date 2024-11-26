@@ -1,5 +1,5 @@
 /*global*/
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 @import url(./assets/css/header.css);
 @import url(./assets/css/hero.css);
@@ -15,10 +15,10 @@
 html {
   font-size: 10px;
   color: #fff;
-  font-family: 'Jura', sans-serif;
+  font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
-  /*background-color: #000;*/
-  background-image: linear-gradient(60deg, #717171 0%, #000 100%);
+  background-color: #000;
+  /* background-image: linear-gradient(60deg, #717171 0%, #000 100%); */
 }
 a {
   text-decoration: none;
@@ -46,22 +46,6 @@ p {
   letter-spacing: 0.05rem;
 }
 
-/*tittle sections*/
-.section-title {
-  font-size: 4rem;
-  font-weight: 300;
-  color: white;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  text-align: center;
-}
-
-.section-title span {
-  color: red;
-  font-weight: 600;
-}
-
 /*nomes com divisão de cores*/
 .brand h1 {
   font-size: 3rem;
@@ -73,16 +57,8 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
-  .section-title {
+  .brand h1 {
     font-size: 2.5rem;
-    padding: 40px;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .section-title {
-    font-size: 2rem;
-    padding: 14px;
   }
 }
 

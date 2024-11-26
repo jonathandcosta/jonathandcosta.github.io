@@ -27,6 +27,7 @@
   font-size: 2rem;
   color: #cecece;
   margin-bottom: 30px;
+  max-width: 610px;
 }
 
 .col-left .about-img {
@@ -53,7 +54,7 @@
   color: white;
   background-color: transparent;
   border: 3px solid red;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   transition: 0.3s ease;
@@ -79,7 +80,7 @@
   }
 
   .titulo {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-bottom: 20px;
   }
 
@@ -101,13 +102,12 @@
 
   .cta {
     padding: 10px 15px;
-    font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 425px) {
   .content-hero {
-    padding: 20px;
+    padding: 30px;
   }
 
   .col-left {
