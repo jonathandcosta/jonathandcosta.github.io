@@ -44,7 +44,7 @@
 .subtitulo {
   font-size: 2.5rem;
   color: #4a5568;
-  max-width: 630px;
+  max-width: 660px;
   line-height: 1.2;
   margin-bottom: 30px;
   font-weight: 400;
@@ -52,10 +52,12 @@
 
 .subtituloname {
   font-size: 3rem;
-  color: #cecece;
   max-width: 630px;
   line-height: 1.6;
-  /* font-weight: 200; */
+  background: linear-gradient(45deg, #4f46e5, #06b6d4); /* Gradiente opcional */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .col-left .about-img {
