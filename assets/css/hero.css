@@ -52,7 +52,6 @@
 
 .subtituloname {
   font-size: 3rem;
-  max-width: 630px;
   line-height: 1.6;
   background: linear-gradient(45deg, #4f46e5, #06b6d4); /* Gradiente opcional */
   -webkit-background-clip: text;
