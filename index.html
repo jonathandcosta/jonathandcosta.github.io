@@ -1,161 +1,124 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css">
-  <title>Jonathan D. Costa</title>
-</head>
-
-<body>
-  <!-- sessão header-->
-  <header>
-    <section id="header">
-      <div class="header container">
-        <div class="nav-bar">
-          <div class="brand">
-            <a href="">
-              <h1><span>J</span>onathan <span>C</span>osta</h1>
-            </a>
-          </div>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonathan Costa</title>
+    <link
+      rel="icon"
+      href="./assets/icon/favicon_green.svg"
+      type="image/svg+xml"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .bg-custom {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+          url("./assets/img/bg.png"); /* Sua foto profissional */
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white font-sans">
+    <div class="bg-custom flex flex-col items-center justify-center px-6 py-12">
+      <div class="mb-8 text-center">
+        <div
+          class="w-32 h-32 rounded-full border-4 border-blue-500 mx-auto mb-4 overflow-hidden shadow-2xl"
+        >
+          <img
+            src="./assets/img/jdc_photo.jpg"
+            alt="Jonathan Costa"
+            class="w-full h-full object-cover"
+          />
         </div>
+        <h1 class="text-3xl font-bold tracking-tight">Jonathan Costa</h1>
+        <p class="text-blue-400 font-medium">
+          Web Developer | Technical E-commerce Specialist
+        </p>
       </div>
-    </section>
-  </header>
 
-  <!-- sessão HERO-->
-  <section id="hero">
-    <div class="hero container">
-      <div class="content-hero">
-        <div class="whrite">
-          <h1 class="titulo">
-            Site Que Converte.<br />
-            Vendas Online Que Decolam. <br />
-            Sua Presença Digital Completa.
-          </h1>
-          <h1 class="subtitulo">Transformo experiências digitais em resultados previsíveis. Do desenvolvimento Web de alta performance à gestão estratégica do seu E-commerce.
-          </h1>
-          <h1 class="subtituloname">Qual é o seu desafio?</h1>
-          <div class="buttons">
-            <a href="https://portifolio-jonathan-opal.vercel.app/" target="_blank" type="button" class="cta">Front end</a>
-            <a href="https://portifolio-jonathan-opal.vercel.app/especialista" target="_blank" type="button" class="cta">e-commerce</a>
+      <p class="text-gray-300 mb-10 text-center max-w-sm">
+        Escolha a especialidade que deseja explorar:
+      </p>
+
+      <div class="w-full max-w-md space-y-4">
+        <a
+          href="https://coming-soon-kohl-theta.vercel.app/"
+          class="glass block p-6 rounded-2xl hover:border-blue-500 transition-all transform hover:scale-105 group"
+          target="_blank"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-xl font-bold group-hover:text-blue-400">
+                Quem Sou Eu?
+              </h2>
+              <p class="text-sm text-gray-400">
+                Minha trajetória e liderança profissional.
+              </p>
+            </div>
+            <span class="text-2xl">👤</span>
           </div>
-        </div>
-        <div class="col-left">
-          <div class="about-img animated fadeIn">
-            <img src="./assets/img/jdc_photo.jpg" alt="img">
+        </a>
+
+        <a
+          href="https://coming-soon-kohl-theta.vercel.app/"
+          class="glass block p-6 rounded-2xl hover:border-green-500 transition-all transform hover:scale-105 group"
+          target="_blank"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-xl font-bold group-hover:text-green-400">
+                Especialista E-commerce
+              </h2>
+              <p class="text-sm text-gray-400">
+                VTEX, Tray, Growth e Escala de Vendas.
+              </p>
+            </div>
+            <span class="text-2xl">🛒</span>
           </div>
-        </div>
+        </a>
+
+        <a
+          href="https://coming-soon-kohl-theta.vercel.app/"
+          class="glass block p-6 rounded-2xl hover:border-purple-500 transition-all transform hover:scale-105 group"
+          target="_blank"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-xl font-bold group-hover:text-purple-400">
+                Web Dev Frontend
+              </h2>
+              <p class="text-sm text-gray-400">
+                Next.js, React, TypeScript e Engenharia.
+              </p>
+            </div>
+            <span class="text-2xl">💻</span>
+          </div>
+        </a>
       </div>
-    </div>
-  </section>
 
-  <!-- sessão profissional gestão-->
-  <!-- <section id="gestao">
-    <div class="gestao container">
-      <div class="content">
-        <div class="section-title">
-          <h3>Transforme Visões em Resultados</h3>
-          <span>um Especialista Faz a Diferença</span>
-        </div>
-        <div class="motivo">
-          <div class="motivos">
-            <h1>Por que escolher o Jonathan para o seu negócio on-line?</h1>
-            <div class="description">
-              <span>🎯</span>
-              <h2>Entende e acompanha as <b>tendências do mercado</b> no digital;</h2>
-            </div>
-            <div class="description">
-              <span>🎯</span>
-              <h2>Analisa o seu nicho de atuação e desenvolve <b>o que faz sentido</b> para o seu negócio;</h2>
-            </div>
-            <div class="description">
-              <span>🎯</span>
-              <h2>Dá <b>valor ao seu tempo e dinheiro</b>, fazendo todo o investimento valer a pena e te trazer retornos;</h2>
-            </div>
-            <div class="description">
-              <span>🎯</span>
-              <h2>Preza pela qualidade, pratica um <b>suporte VIP </b>durante a prestação dos serviços;</h2>
-            </div>
-          </div>
-
-          <div class="motivos">
-            <div class="description">
-              <span>🎯</span>
-              <h2>Cumpre com <b>prazos e solicitações acordadas</b> durante o projeto;</h2>
-            </div>
-            <div class="description">
-              <span>🎯</span>
-              <h2>Oferece <b>suporte personalizado</b> durante a prestação dos serviços;</h2>
-            </div>
-            <div class="description">
-              <span>🎯</span>
-              <h2><b>Personaliza tudo com muita dedicação</b>, com atenção aos mínimos detalhes, tudo pensado para que a loja seja perfeita.</h2>
-            </div>
-            <div class="description">
-              <span>🎯</span>
-              <h2> Focado em <b>atrair mais clientes</b> para o seu negócio todos os dias;</h2>
-            </div>
-            <div class="description">
-              <span>🎯</span>
-              <h2>Cria interesse pelo <b>seu produto ou serviço</b> em poucos minutos;</h2>
-            </div>
-          </div>
-
-        </div>
-        <div class="botao">
-          <a href="https://wa.me/+5584999043539?text=Quero%20transformar%20meu%20negócio!" class="cta">🚀 Falar no WhatsApp Agora</a>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- sessão profissional web_sites-->
-  <!-- <section id="profissional">
-    <div class="profissional container">
-      <div class="content">
-        <div class="section-title">
-          <h3>o sucesso do seu negócio no digital</h3>
-          <span>Com um site de alto impacto</span>
-        </div>
-        <div class="why">
-          <div class="whyNot">
-            <h1>Com um site de alto impacto,</br>você pode alcançar:</h1>
-            <h2><span>✔</span>Ter uma vitrine no <b>maior espaço</b> de vendas do mundo;</h2>
-            <h2><span>✔</span><b>Divulgar seus serviços</b> ou produtos de um jeito prático e rápido;</h2>
-            <h2><span>✔</span><b>Atrair mais pessoas</b> para o seu negócio todos os dias;</h2>
-            <h2><span>✔</span><b>Criar</b> interesse pelo seu produto ou serviço <b>em poucos minutos</b>;</h2>
-            <h2><span>✔</span>Mostrar os <b>benefícios, resultados e diferenciais</b> e comprovar sua expertise;</h2>
-            <h2><span>✔</span><b>Ter páginas responsivas</b> e com carregamento em <b>menos de 1 segundo</b>;</h2>
-            <h2><span>✔</span><b>Vender mais</b> e de maneira <b>recorrente</b> para os milhões de brasileiros;</h2>
-            <h2><span>✔</span>Abrir <b>inúmeras possibilidades</b> para o seu negócio;</h2>
-          </div>
-          <div class="answer">
-            <p>O que acabei de te mostrar agora são apenas algumas das muitas vantagens que um site bem construído e otimizado vai fazer pelo seu negócio.</p>
-            <p>Com esta trilha em mãos, você vai elevar o seu negócio para o próximo nível e garantir uma estrutura de vendas eficiente e ágil.</p>
-            <p>A partir de tudo o que você viu agora, quero saber de você, está pronto para vender mais em 2025 com sites de alta conversão?</p>
-            <p>Está na hora de usar o poder da internet a seu favor para conquistar novos clientes, lucrar de forma recorrente e destacar sua empresa em 2025.</p>
-          </div>
-        </div>
+      <div
+        class="mt-12 flex space-x-6 grayscale opacity-70 hover:opacity-100 transition"
+      >
+        <a
+          href="https://www.linkedin.com/in/jonathanduartecosta/"
+          target="_blank"
+          class="hover:scale-110 transition"
+          >LinkedIn</a
+        >
+        <a
+          href="https://github.com/jonathandcosta"
+          target="_blank"
+          class="hover:scale-110 transition"
+          >GitHub</a
+        >
       </div>
     </div>
-  </section> -->
-
-  <!-- sessão footer-->
-  <!-- <footer>
-    <section id="footer">
-      <div class="footer container">
-        <div class="brand">
-          <h1><span>J</span>onathan <span>C</span>osta</h1>
-        </div>
-        <p>Copyright © 2021 Jonathan</p>
-      </div>
-    </section>
-  </footer> -->
-  <!-- Script JavaScript-->
-  <!-- <script src="./assets/js/app.js"></script> -->
-</body>
-
+  </body>
 </html>
