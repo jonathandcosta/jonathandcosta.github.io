@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icon/favicon_yellow.svg"
+      type="image/svg+xml"
+    />
+    <title>Jonathan Costa | Especialista em E-commerce & Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-gold": "#fbbf24",
+              "brand-green": "#10b981",
+              "dark-bg": "#080808",
+              "card-bg": "#111111",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gold-gradient {
+        background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .stat-card {
+        border: 1px solid rgba(251, 191, 36, 0.1);
+        transition: all 0.3s ease;
+      }
+      .stat-card:hover {
+        border-color: #fbbf24;
+        transform: translateY(-5px);
+      }
+    </style>
+  </head>
+  <body class="bg-dark-bg text-white font-sans">
+    <nav
+      class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 py-4"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <span class="font-bold text-xl tracking-tighter text-brand-gold">
+          Jonathan<span class="text-white">Costa</span>
+        </span>
+
+        <div class="flex items-center">
+          <div class="hidden md:flex space-x-8 text-sm font-medium mr-8">
+            <a
+              href="index.html"
+              class="text-white hover:text-brand-gold transition"
+              >Início</a
+            >
+            <a
+              href="#resultados"
+              class="text-white hover:text-brand-gold transition"
+              >Resultados</a
+            >
+            <a
+              href="#experiencia"
+              class="text-white hover:text-brand-gold transition"
+              >Experiência</a
+            >
+          </div>
+
+          <a
+            href="#contato"
+            class="bg-brand-gold text-black px-4 py-2 md:px-5 md:py-2 rounded-full text-xs md:text-sm font-bold hover:bg-yellow-500 transition whitespace-nowrap"
+          >
+            Falar com Especialista
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="pt-40 pb-20 text-center px-6">
+      <div class="container mx-auto">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
+          E-commerce que <span class="gold-gradient">Escala de Verdade</span>
+        </h1>
+        <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
+          Estrategista com histórico de +300% de aumento em faturamento,
+          especialista em plataformas VTEX/Tray/NuvemShop e automação de
+          operações complexas.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="stat-card bg-card-bg p-8 rounded-3xl">
+            <div class="text-4xl font-black text-brand-gold mb-2">+300%</div>
+            <div class="text-gray-400 uppercase text-xs tracking-widest">
+              Crescimento de Faturamento
+            </div>
+          </div>
+          <div class="stat-card bg-card-bg p-8 rounded-3xl">
+            <div class="text-4xl font-black text-brand-gold mb-2">+400%</div>
+            <div class="text-gray-400 uppercase text-xs tracking-widest">
+              Tráfego Orgânico (SEO)
+            </div>
+          </div>
+          <div class="stat-card bg-card-bg p-8 rounded-3xl">
+            <div class="text-4xl font-black text-brand-gold mb-2">80%</div>
+            <div class="text-gray-400 uppercase text-xs tracking-widest">
+              Automação de Processos
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="resultados" class="py-20 bg-white/5">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">
+          Cases de <span class="text-brand-gold">Sucesso</span>
+        </h2>
+
+        <div class="swiper recSwiper max-w-5xl mx-auto">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide p-4">
+              <div
+                class="bg-card-bg p-10 rounded-3xl h-full border border-white/5"
+              >
+                <span class="text-brand-gold font-mono text-sm"
+                  >Case: Super Giro</span
+                >
+                <h3 class="text-2xl font-bold mt-4 mb-4">
+                  Automação de Marketplaces
+                </h3>
+                <p class="text-gray-400 italic">
+                  Transição de operação 100% manual para fluxo automatizado
+                  integrando Amazon, Shopee, Mercado Livre e o E-Commerce,
+                  reduzindo erros de faturamento e logística.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide p-4">
+              <div
+                class="bg-card-bg p-10 rounded-3xl h-full border border-white/5"
+              >
+                <span class="text-brand-gold font-mono text-sm"
+                  >Case: Brazz Brazz</span
+                >
+                <h3 class="text-2xl font-bold mt-4 mb-4">
+                  Escala em Papelaria
+                </h3>
+                <p class="text-gray-400 italic">
+                  Aumento de 66% no volume de pedidos mensais através do
+                  redesenho da arquitetura do site e implementação de SEO
+                  avançado.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide p-4">
+              <div
+                class="bg-card-bg p-10 rounded-3xl h-full border border-white/5"
+              >
+                <span class="text-brand-gold font-mono text-sm"
+                  >Case: Atacado do Lojista</span
+                >
+                <h3 class="text-2xl font-bold mt-4 mb-4">
+                  Processos Automatizados
+                </h3>
+                <p class="text-gray-400 italic">
+                  Desenvolvimento de integrações personalizadas entre ERP,
+                  plataforma VTEX e gateways de pagamento, reduzindo o tempo de
+                  processamento de pedidos em 40%.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide p-4">
+              <div
+                class="bg-card-bg p-10 rounded-3xl h-full border border-white/5"
+              >
+                <span class="text-brand-gold font-mono text-sm"
+                  >Case: Comercial Maranguape</span
+                >
+                <h3 class="text-2xl font-bold mt-4 mb-4">
+                  Auxilio na Migração VTEX
+                </h3>
+                <p class="text-gray-400 italic">
+                  Liderança na migração da plataforma Tray para VTEX IO,
+                  garantindo continuidade operacional e aumento de 25% na
+                  velocidade do site.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination mt-10"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="py-24">
+      <div
+        class="container mx-auto px-6 flex flex-col lg:flex-row gap-16 items-center"
+      >
+        <div class="lg:w-1/2">
+          <img
+            src="./assets/img/jonathan_profissional.png"
+            alt="Jonathan Costa"
+            class="rounded-[40px] shadow-2xl border-2 border-brand-gold/20"
+          />
+        </div>
+        <div class="lg:w-1/2">
+          <h2 class="text-4xl font-bold mb-6">
+            Unindo Tecnologia à
+            <span class="text-brand-gold">Lucratividade</span>
+          </h2>
+          <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+            Minha expertise reside em entender a dor operacional do lojista. Com
+            background em Ciência da Computação, não apenas sugiro estratégias,
+            eu implemento as integrações necessárias entre ERP, plataformas de
+            pagamento, plataforma de logística e marketplaces para garantir uma
+            operação sem gargalos.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <span class="text-brand-gold text-2xl">✔</span>
+              <div>
+                <h4 class="font-bold">Especialista VTEX IO & Tray</h4>
+                <p class="text-sm text-gray-500">
+                  Migração, configuração e otimização de checkout.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="text-brand-gold text-2xl">✔</span>
+              <div>
+                <h4 class="font-bold">Arquitetura de Integrações</h4>
+                <p class="text-sm text-gray-500">
+                  ERP, Logística, Marketing, ADS's, Marketplaces, Analytics.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="text-brand-gold text-2xl">✔</span>
+              <div>
+                <h4 class="font-bold">Gestão Orientada a Dados</h4>
+                <p class="text-sm text-gray-500">
+                  Dashboards em Power BI e monitoramento de ROI, CAC e LTV.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="text-brand-gold text-2xl">✔</span>
+              <div>
+                <h4 class="font-bold">High Performance</h4>
+                <p class="text-sm text-gray-500">
+                  Otimização de SEO e aumento de tráfego orgânico.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-brand-gold/5">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-12 italic">
+          Recomendações <span class="text-brand-gold">Estratégicas</span>
+        </h2>
+        <div class="swiper recSwiper max-w-2xl mx-auto">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide italic text-xl text-gray-300">
+              "O Jonathan transformou nossa operação. A visão dele sobre
+              automação nos poupou meses de trabalho manual."
+            </div>
+            <div class="swiper-slide italic text-xl text-gray-300">
+              "Saímos de uma operação completamente manual para uma operação
+              automatizada, melhoramos as conversões e ganhamos agilidade em
+              toda da nossa operação desde o pedido até a entrega."
+            </div>
+            <div class="swiper-slide italic text-xl text-gray-300">
+              "Faturamento duplicado e visibilidade total dos dados. Um divisor
+              de águas para nosso e-commerce."
+            </div>
+            <div class="swiper-slide italic text-xl text-gray-300">
+              "Reestruturamos nossa plataforma com integração ERP impecável,
+              resultando em crescimento de 30% na receita."
+            </div>
+            <div class="swiper-slide italic text-xl text-gray-300">
+              "Com a reorganização do catálogo elevamos o nosso tráfego em 50%
+              com melhorias contínuas na plataforma VTEX."
+            </div>
+            <div class="swiper-slide italic text-xl text-gray-300">
+              "A consultoria do Jonathan foi crucial para nossa migração
+              tranquila para a Tray, ele conseguiu garantir a estabilidade para
+              a nossa operação."
+            </div>
+            <div class="swiper-slide italic text-xl text-gray-300">
+              "Melhoramos o SEO do nosso site obtendo redução de 25% no CAC e
+              passamos a atender o território nacional"
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="py-24 text-center px-6">
+      <h2 class="text-4xl font-bold mb-6 italic">
+        Pronto para o Próximo Nível?
+      </h2>
+      <p class="text-gray-400 mb-10 max-w-xl mx-auto">
+        Solicite uma análise da sua operação ou uma proposta de consultoria
+        estratégica.
+      </p>
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+        <a
+          href="https://wa.me/5584999043539"
+          target="_blank"
+          class="bg-brand-gold text-black px-10 py-4 rounded-full font-black text-lg hover:scale-105 transition"
+          >Chamar no WhatsApp</a
+        >
+        <a
+          href="mailto:jddatsoc@gmail.com"
+          class="border border-white/20 px-10 py-4 rounded-full font-bold hover:bg-white/5 transition"
+          >Enviar E-mail</a
+        >
+      </div>
+      <div class="mt-8">
+        <a
+          href="./assets/docs/curriculo-JonathanCosta.pdf"
+          download
+          class="text-brand-gold hover:underline text-sm"
+          >Baixar Currículo Executivo (PDF)</a
+        >
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      new Swiper(".ecomSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        breakpoints: { 768: { slidesPerView: 2 } },
+      });
+      new Swiper(".recSwiper", { loop: true, autoplay: { delay: 5000 } });
+    </script>
+  </body>
+</html>
