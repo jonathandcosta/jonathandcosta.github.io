@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icon/favicon_green.svg"
+      type="image/svg+xml"
+    />
+    <title>Jonathan Costa | Trajetória e Liderança</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-blue": "#4ADE80",
+              "brand-purple": "#8b5cf6", // Mantendo a identidade do seu projeto .dev
+              "dark-bg": "#0a0a0a",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+      }
+      .profile-blob {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      }
+    </style>
+  </head>
+  <body class="bg-dark-bg text-white font-sans overflow-x-hidden">
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 py-4">
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="index.html" class="font-bold tracking-tighter text-xl">
+          Jonathan<span class="text-brand-blue">Costa.dev</span>
+        </a>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="index.html" class="hover:text-brand-blue transition"
+            >Início</a
+          >
+          <a href="#historia" class="hover:text-brand-blue transition"
+            >Minha História</a
+          >
+          <a href="#experiencia" class="hover:text-brand-blue transition"
+            >Experiência</a
+          >
+        </div>
+        <a
+          href="#contato"
+          class="hidden md:block bg-brand-blue px-5 py-2 rounded-full text-sm font-bold hover:bg-green-900 transition"
+          >Contato</a
+        >
+      </div>
+    </nav>
+
+    <section class="pt-40 pb-20">
+      <div
+        class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div class="order-2 md:order-1">
+          <span
+            class="text-brand-blue font-mono tracking-widest text-sm uppercase mb-4 block"
+            >Sobre mim</span
+          >
+          <h1
+            class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter italic"
+          >
+            Liderança que <span class="text-brand-blue">Codifica.</span>
+          </h1>
+          <p class="text-gray-400 text-lg leading-relaxed mb-8">
+            Bacharel em Ciência da Computação com uma jornada moldada pela
+            gestão de grandes equipes e pela paixão em resolver problemas
+            complexos através da tecnologia.
+          </p>
+          <div class="flex gap-4 border-l-2 border-brand-blue/30 pl-6 py-2">
+            <div>
+              <p class="text-2xl font-bold">+300</p>
+              <p class="text-xs text-gray-500 uppercase">Pessoas Lideradas</p>
+            </div>
+            <div class="ml-8">
+              <p class="text-2xl font-bold">24</p>
+              <p class="text-xs text-gray-500 uppercase">Meses nos EUA</p>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 md:order-2 flex justify-center">
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-brand-blue blur-[100px] opacity-20"
+            ></div>
+            <div
+              class="w-64 h-64 md:w-80 md:h-80 overflow-hidden profile-blob border-2 border-brand-blue/30 relative z-10"
+            >
+              <img
+                src="./assets/img/jdc_photo.jpg"
+                alt="Jonathan Costa"
+                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white/5">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2
+          class="text-2xl font-bold mb-8 text-brand-blue uppercase tracking-widest text-center"
+        >
+          Minha História
+        </h2>
+        <div class="space-y-6 text-gray-300 text-lg leading-relaxed italic">
+          <p>
+            Minha carreira não começou no código, mas na <b>liderança</b>.
+            Gerenciei equipes de mais de 300 pessoas em organizações como
+            ABIJCSUD e Royal Prestige, onde aprendi que a tecnologia só é
+            valiosa quando serve às pessoas e aos resultados de negócio.
+          </p>
+          <p>
+            Com a graduação em <b>Ciência da Computação</b>, uni essa visão
+            executiva à capacidade técnica de construir sistemas. Minha
+            experiência internacional (6 meses nos EUA) e o trabalho voluntário
+            como Coordenador do "Mãos Que Ajudam" me deram a adaptabilidade
+            necessária para trabalhar em ambientes globais e multidisciplinares.
+          </p>
+          <p>
+            Hoje, atuo na intersecção entre o
+            <b>Desenvolvimento de Software (Next.js/React)</b> e a
+            <b>Estratégia de E-commerce</b>, sempre buscando automatizar o que é
+            manual e escalar o que é lucrativo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="py-24 bg-white/[0.02]">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-16 text-center italic">
+          Minha <span class="text-brand-blue">Cronologia</span> Profissional
+        </h2>
+
+        <div
+          class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-brand-blue before:via-brand-blue/30 before:to-transparent"
+        >
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <div class="font-bold text-white text-xl uppercase italic">
+                  E-commerce Specialist
+                </div>
+                <time class="font-mono text-xs text-brand-blue font-semibold"
+                  >Presente</time
+                >
+              </div>
+              <div class="text-gray-500 text-sm mb-4">Brazz Brazz</div>
+              <p class="text-gray-400 text-sm">
+                Supervisão de operações de e-commerce com foco em automação de
+                processos e aumento de conversão.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                <path
+                  d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1l-1-1H8L7 5H4z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <div class="font-bold text-white text-xl uppercase italic">
+                  E-commerce Specialist
+                </div>
+                <time class="font-mono text-xs text-brand-blue font-semibold"
+                  >2025</time
+                >
+              </div>
+              <div class="text-gray-500 text-sm mb-4">Super Giro</div>
+              <p class="text-gray-400 text-sm">
+                Focado em automação de fluxos em marketplaces e consultoria
+                estratégica para aumento de conversão.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <div class="font-bold text-white text-xl uppercase italic">
+                  Estágio em TI
+                </div>
+                <time class="font-mono text-xs text-brand-blue font-semibold"
+                  >2025</time
+                >
+              </div>
+              <div class="text-gray-500 text-sm mb-4">CRC-RN</div>
+              <p class="text-gray-400 text-sm">
+                Suporte a usuários (contadores, auxiliares) em sistemas de
+                gestão (ERP), resolução de problemas de hardware/software,
+                instalação de programas.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <div
+                  class="font-bold text-white text-xl italic uppercase font-mono uppercase"
+                >
+                  Ciência da Computação
+                </div>
+                <time class="font-mono text-xs text-brand-blue italic"
+                  >Bacharelado</time
+                >
+              </div>
+              <div class="text-gray-500 text-sm mb-4">UnP - Natal/RN</div>
+              <p class="text-gray-400 text-sm italic">
+                Fundação teórica robusta para construção de arquiteturas
+                escaláveis e engenharia de software.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                <path
+                  d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1l-1-1H8L7 5H4z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <div class="font-bold text-white text-xl uppercase italic">
+                  E-commerce Specialist
+                </div>
+                <time class="font-mono text-xs text-brand-blue font-semibold"
+                  >2024</time
+                >
+              </div>
+              <div class="text-gray-500 text-sm mb-4">
+                Atacado do Lojista | CM
+              </div>
+              <p class="text-gray-400 text-sm">
+                Supervisor do e-commerce, liderando equipes de atendimento,
+                vendas, e Marketing focado em resultados trazendo um faturamento
+                previsível e escalável.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <div
+                  class="font-bold text-white text-xl italic uppercase font-mono uppercase"
+                >
+                  Engenharia Frontend
+                </div>
+                <time class="font-mono text-xs text-brand-blue italic"
+                  >Técnico</time
+                >
+              </div>
+              <div class="text-gray-500 text-sm mb-4">EBAC</div>
+              <p class="text-gray-400 text-sm italic">
+                Formação prática em desenvolvimento frontend com foco em React e
+                Next.js.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                <path
+                  d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1l-1-1H8L7 5H4z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <div class="font-bold text-white text-xl uppercase italic">
+                  Auxiliar de Desenvolvimento
+                </div>
+                <time class="font-mono text-xs text-brand-blue font-semibold"
+                  >2023</time
+                >
+              </div>
+              <div class="text-gray-500 text-sm mb-4">Comercial Maranguape</div>
+              <p class="text-gray-400 text-sm">
+                Desenvolvimento de sistemas e suporte técnico para otimização de
+                processos internos e automação de tarefas manuais.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                <path
+                  d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1l-1-1H8L7 5H4z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <div class="font-bold text-white text-xl italic uppercase">
+                  Supervisor Geral
+                </div>
+                <time class="font-mono text-xs text-brand-blue"
+                  >2020 - 2023</time
+                >
+              </div>
+              <div class="text-gray-500 text-sm mb-4">
+                Royal Prestige | ABIJCSUD
+              </div>
+              <p class="text-gray-400 text-sm">
+                Liderança direta de mais de 300 pessoas. Implementação de KPIs e
+                gestão de faturamento em larga escala.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contato" class="py-24 border-t border-white/5">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-12 italic tracking-tighter">
+          Pronto para escalar sua <br />
+          <span class="text-brand-blue underline">operação digital?</span>
+        </h2>
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+          <a
+            href="https://wa.me/5584999043539"
+            class="bg-brand-blue px-12 py-5 rounded-2xl font-bold hover:scale-105 transition shadow-xl shadow-blue-500/10"
+          >
+            Falar via WhatsApp
+          </a>
+          <a
+            href="JonathanCosta_Curriculo.pdf"
+            download
+            class="glass px-12 py-5 rounded-2xl font-bold border border-white/10 hover:bg-white/5 transition"
+          >
+            Download CV (PDF)
+          </a>
+        </div>
+        <p
+          class="mt-20 text-gray-600 text-xs font-mono uppercase tracking-[0.3em]"
+        >
+          Jonathan Costa &copy; 2025 | ALL RIGHTS RESERVED
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
