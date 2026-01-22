@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
       href="./assets/icon/favicon_blue.svg"
       type="image/svg+xml"
     />
-    <title>Jonathan Costa | Web Developer</title>
+    <title>Jonathan Costa | Software Engineer | Architecture & Frontend</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -20,10 +20,9 @@
         theme: {
           extend: {
             colors: {
-              "brand-purple": "#05ABD4 ",
+              "brand-cyan": "#05ABD4",
               "brand-blue": "#3b82f6",
               "dark-bg": "#050505",
-              "glass-card": "rgba(255, 255, 255, 0.03)",
             },
           },
         },
@@ -32,38 +31,43 @@
     <style>
       .glass-effect {
         backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .text-glow {
+        text-shadow: 0 0 20px rgba(5, 171, 212, 0.3);
       }
     </style>
   </head>
-  <body class="bg-dark-bg text-white font-sans">
+  <body class="bg-dark-bg text-white font-sans overflow-x-hidden">
     <nav
-      class="fixed top-0 w-full z-50 glass-effect bg-black/50 py-4 backdrop-blur-md border-b border-white/5"
+      class="fixed top-0 w-full z-50 glass-effect py-4 border-b border-white/5"
     >
       <div class="container mx-auto px-6 flex justify-between items-center">
-        <span class="font-bold tracking-tighter text-xl">
-          Jonathan<span class="text-brand-purple">Costa.dev</span>
-        </span>
+        <a href="index.html" class="font-bold tracking-tighter text-xl">
+          Jonathan<span class="text-brand-cyan">Costa.dev</span>
+        </a>
 
-        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-          <a href="index.html" class="hover:text-brand-purple transition"
-            >Voltar ao Início</a
+        <div
+          class="hidden md:flex items-center space-x-8 text-[10px] font-bold uppercase tracking-widest"
+        >
+          <a href="index.html" class="hover:text-brand-cyan transition"
+            >Início</a
           >
-          <a href="#projetos" class="hover:text-brand-purple transition"
-            >Projetos</a
+          <a href="sou.html" class="hover:text-brand-cyan transition"
+            >Liderança</a
           >
-          <a href="#sobre" class="hover:text-brand-purple transition">Sobre</a>
+          <a href="commerce.html" class="hover:text-brand-cyan transition"
+            >Produto & Estratégia</a
+          >
           <a
             href="#contato"
-            class="bg-brand-purple px-4 py-2 rounded-full hover:bg-[#3b82f6] transition"
+            class="bg-brand-cyan text-black px-5 py-2 rounded-full hover:bg-white transition"
             >Contato</a
           >
         </div>
 
-        <button
-          id="mobile-menu-button"
-          class="md:hidden text-white focus:outline-none"
-        >
+        <button id="mobile-menu-button" class="md:hidden text-white">
           <svg
             class="w-6 h-6"
             fill="none"
@@ -71,7 +75,6 @@
             viewBox="0 0 24 24"
           >
             <path
-              id="menu-icon"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
@@ -83,49 +86,62 @@
 
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-black/95 border-b border-white/10 px-6 py-6 space-y-4"
+        class="hidden md:hidden bg-black/95 px-6 py-6 space-y-4 border-b border-white/10"
       >
         <a
           href="index.html"
-          class="block text-sm hover:text-brand-purple transition"
-          >Voltar ao Início</a
+          class="block text-xs font-bold uppercase tracking-widest hover:text-brand-cyan"
+          >Início</a
         >
         <a
-          href="#projetos"
-          class="block text-sm hover:text-brand-purple transition"
-          >Projetos</a
+          href="sou.html"
+          class="block text-xs font-bold uppercase tracking-widest hover:text-brand-cyan"
+          >Liderança</a
         >
         <a
-          href="#sobre"
-          class="block text-sm hover:text-brand-purple transition"
-          >Sobre</a
+          href="commerce.html"
+          class="block text-xs font-bold uppercase tracking-widest hover:text-brand-cyan"
+          >Produto</a
         >
-        <a href="#contato" class="block text-sm text-brand-purple font-bold"
+        <a
+          href="#contato"
+          class="block text-xs font-bold uppercase tracking-widest text-brand-cyan"
           >Contato</a
         >
       </div>
     </nav>
 
-    <section id="projetos" class="py-20 bg-black overflow-hidden">
+    <section id="projetos" class="pt-40 pb-20 bg-black overflow-hidden">
       <div
-        class="container mx-auto px-6 mb-12 mt-10 flex justify-between items-end"
+        class="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6"
       >
         <div>
-          <h2 class="text-3xl font-bold text-white tracking-tighter">
-            Projetos <span class="text-brand-gold">em Destaque</span>
+          <span
+            class="text-brand-cyan font-mono text-xs uppercase tracking-[0.3em] mb-3 block"
+            >Engineering & Systems</span
+          >
+          <h2
+            class="text-4xl md:text-5xl font-bold text-white tracking-tighter leading-tight"
+          >
+            Arquitetura de <br /><span class="text-brand-cyan"
+              >Software & Performance</span
+            >
           </h2>
-          <p class="text-gray-500 text-sm mt-2">
-            Desenvolvidos com tecnologias modernas
+          <p class="text-gray-500 text-sm mt-4 max-w-lg leading-relaxed">
+            Sistemas escaláveis construídos sob princípios de código limpo,
+            modularidade e integração contínua. Explore meu ecossistema de
+            soluções técnicas.
           </p>
         </div>
+
         <div class="flex gap-4">
           <div
-            class="swiper-button-prev-custom cursor-pointer text-brand-gold hover:text-white transition"
+            class="swiper-button-prev-custom cursor-pointer text-brand-cyan hover:text-white transition"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
+              width="40"
+              height="40"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -137,12 +153,12 @@
             </svg>
           </div>
           <div
-            class="swiper-button-next-custom cursor-pointer text-brand-gold hover:text-white transition"
+            class="swiper-button-next-custom cursor-pointer text-brand-cyan hover:text-white transition"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
+              width="40"
+              height="40"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -157,315 +173,337 @@
       </div>
 
       <div class="swiper github-swiper px-6">
-        <div id="github-projects-wrapper" class="swiper-wrapper">
-          <p class="text-white swiper-slide">Carregando repositórios...</p>
+        <div id="github-projects-wrapper" class="swiper-wrapper italic">
+          <p class="text-gray-500 swiper-slide">
+            Consultando repositórios remotos...
+          </p>
         </div>
-        <!-- <div class="swiper-pagination !static mt-10"></div> -->
       </div>
     </section>
 
-    <section
-      id="sobre"
-      class="py-20 bg-gradient-to-b from-dark-bg to-[#0a0a0a]"
-    >
+    <section id="sobre" class="py-24 bg-gradient-to-b from-black to-[#080808]">
       <div
-        class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16"
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-20"
       >
-        <div class="md:w-1/2">
+        <div class="md:w-1/2 relative group">
+          <div
+            class="absolute inset-0 bg-brand-cyan blur-[120px] opacity-10 group-hover:opacity-20 transition"
+          ></div>
           <img
             src="./assets/img/growth_dev.png"
-            alt="Jonathan Costa"
-            class="rounded-3xl shadow-2xl w-full max-w-md mx-auto"
+            alt="Engineering Visualization"
+            class="relative z-10 rounded-3xl shadow-2xl border border-white/5 grayscale hover:grayscale-0 transition-all duration-1000"
           />
         </div>
+
         <div class="md:w-1/2">
-          <h2 class="text-4xl font-bold mb-6">
-            Engenharia com <span class="text-brand-blue">Propósito</span>
+          <h2 class="text-4xl font-bold mb-8 tracking-tighter italic">
+            Engenharia com <span class="text-brand-cyan">Visão de Produto</span>
           </h2>
-          <p class="text-gray-400 text-lg mb-6 leading-relaxed italic">
-            Como Bacharel em Ciência da Computação e desenvolvedor focado em
-            Next.js, minha missão é unir código limpo (SOLID) a experiências que
-            convertem. Minha bagagem em e-commerce me permite entender que cada
-            milissegundo de performance reflete no resultado final do negócio.
+          <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+            Com base acadêmica em <b>Ciência da Computação</b>, projeto
+            interfaces onde a performance não é opcional. Utilizo o ecossistema
+            <b>Next.js e TypeScript</b> para criar aplicações que respeitam os
+            princípios <b>SOLID e Clean Architecture</b>, garantindo que o
+            código seja tão escalável quanto o negócio.
           </p>
-          <div class="grid grid-cols-2 gap-4 text-sm">
-            <div class="flex items-center gap-2">
-              <div class="w-2 h-2 bg-brand-purple rounded-full"></div>
-              Next.js / React JS
+
+          <div
+            class="grid grid-cols-2 gap-6 text-xs font-bold uppercase tracking-widest"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-2 h-2 bg-brand-cyan shadow-[0_0_10px_#05ABD4]"
+              ></div>
+              React / Next.js 14+
             </div>
-            <div class="flex items-center gap-2">
-              <div class="w-2 h-2 bg-brand-purple rounded-full"></div>
-              TypeScript / Jest
+            <div class="flex items-center gap-3">
+              <div
+                class="w-2 h-2 bg-brand-cyan shadow-[0_0_10px_#05ABD4]"
+              ></div>
+              TypeScript / Node.js
             </div>
-            <div class="flex items-center gap-2">
-              <div class="w-2 h-2 bg-brand-purple rounded-full"></div>
-              Clean Architecture
+            <div class="flex items-center gap-3">
+              <div
+                class="w-2 h-2 bg-brand-cyan shadow-[0_0_10px_#05ABD4]"
+              ></div>
+              System Integration (APIs)
             </div>
-            <div class="flex items-center gap-2">
-              <div class="w-2 h-2 bg-brand-purple rounded-full"></div>
-              Automação de APIs
+            <div class="flex items-center gap-3">
+              <div
+                class="w-2 h-2 bg-brand-cyan shadow-[0_0_10px_#05ABD4]"
+              ></div>
+              Performance & Vitals
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20">
+    <section class="py-24 bg-black">
       <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center">
-          O que dizem
-          <span class="text-brand-purple">Sobre Mim</span>
+        <h2
+          class="text-3xl font-bold mb-16 text-center italic tracking-tighter"
+        >
+          Validado pelo <span class="text-brand-cyan">Mercado</span>
         </h2>
-        <div class="swiper recommendationSwiper max-w-3xl mx-auto">
+        <div class="swiper recommendationSwiper max-w-4xl mx-auto">
           <div class="swiper-wrapper">
-            <div class="swiper-slide p-8 text-center glass-effect rounded-3xl">
-              <p class="text-xl italic mb-6">
+            <div
+              class="swiper-slide p-10 text-center glass-effect rounded-[2rem]"
+            >
+              <p
+                class="text-lg md:text-xl italic mb-8 text-gray-300 leading-relaxed"
+              >
                 "Um excelente líder e chefe. Sempre buscando maneiras de
                 melhorar o desempenho da equipe e garantir que tudo seja feito
                 com eficiência. Super honesto e disposto a ajudar a todos."
               </p>
-              <h4 class="font-bold text-brand-blue">
+              <h4
+                class="font-bold text-brand-cyan uppercase tracking-widest text-xs"
+              >
                 Analista de Dados @ Royal Prestige
               </h4>
             </div>
-            <div class="swiper-slide p-8 text-center glass-effect rounded-3xl">
-              <p class="text-xl italic mb-6">
-                "Profissional completo. Uniu nossa necessidade de performance
-                com uma interface que os clientes amaram usar."
+
+            <div
+              class="swiper-slide p-10 text-center glass-effect rounded-[2rem]"
+            >
+              <p
+                class="text-lg md:text-xl italic mb-8 text-gray-300 leading-relaxed"
+              >
+                "Jonathan é um profissional dedicado e comprometido com a
+                excelência. Sua habilidade em liderar equipes e entregar o
+                melhor resultado é notável. Sempre disposto a enfrentar desafios
+                e superar expectativas."
               </p>
-              <h4 class="font-bold text-brand-blue">CEO @ L R Seguros</h4>
+              <h4
+                class="font-bold text-brand-cyan uppercase tracking-widest text-xs"
+              >
+                CEO @ L R Seguros
+              </h4>
             </div>
-            <div class="swiper-slide p-8 text-center glass-effect rounded-3xl">
-              <p class="text-xl italic mb-6">
+
+            <div
+              class="swiper-slide p-10 text-center glass-effect rounded-[2rem]"
+            >
+              <p
+                class="text-lg md:text-xl italic mb-8 text-gray-300 leading-relaxed"
+              >
                 "Jonathan é um profissional extremamente dedicado que persegue
                 seus objetivos com muita dedicação. Qualquer empresa/projeto
                 terá sorte de tê-lo em sua equipe."
               </p>
-              <h4 class="font-bold text-brand-blue">
+              <h4
+                class="font-bold text-brand-cyan uppercase tracking-widest text-xs"
+              >
                 Compliance @ Young Living
               </h4>
             </div>
-            <div class="swiper-slide p-8 text-center glass-effect rounded-3xl">
-              <p class="text-xl italic mb-6">
+
+            <div
+              class="swiper-slide p-10 text-center glass-effect rounded-[2rem]"
+            >
+              <p
+                class="text-lg md:text-xl italic mb-8 text-gray-300 leading-relaxed"
+              >
                 "Um profissional muito dedicado e trabalhador em suas ações e
                 estudos em sua área. Com dedicação, ele aprende e aplica novas
                 habilidades de forma eficiente e consistente."
               </p>
-              <h4 class="font-bold text-brand-blue">
+              <h4
+                class="font-bold text-brand-cyan uppercase tracking-widest text-xs"
+              >
                 Gerente de Vendas @ ZEIS
               </h4>
             </div>
-            <div class="swiper-slide p-8 text-center glass-effect rounded-3xl">
-              <p class="text-xl italic mb-6">
+
+            <div
+              class="swiper-slide p-10 text-center glass-effect rounded-[2rem]"
+            >
+              <p
+                class="text-lg md:text-xl italic mb-8 text-gray-300 leading-relaxed"
+              >
                 "Excelente profissional e um dos líderes mais qualificados com
-                quem já trabalhei. Ético, comprometido e motivador, e
-                principalmente focado em resultados de alta performance."
+                quem já trabalhei. Ético, comprometido e motivador, focado em
+                resultados de alta performance."
               </p>
-              <h4 class="font-bold text-brand-blue">
-                Executivo de Contas @ Phiplip Morris
+              <h4
+                class="font-bold text-brand-cyan uppercase tracking-widest text-xs"
+              >
+                Executivo de Contas @ Philip Morris
               </h4>
             </div>
-            <div class="swiper-slide p-8 text-center glass-effect rounded-3xl">
-              <p class="text-xl italic mb-6">
+
+            <div
+              class="swiper-slide p-10 text-center glass-effect rounded-[2rem]"
+            >
+              <p
+                class="text-lg md:text-xl italic mb-8 text-gray-300 leading-relaxed"
+              >
                 "Jonathan elevou o nível técnico da nossa equipe com sua
                 experiência em marketing. Ele é um verdadeiro mentor, sempre
                 disposto a compartilhar conhecimento."
               </p>
-              <h4 class="font-bold text-brand-blue">
+              <h4
+                class="font-bold text-brand-cyan uppercase tracking-widest text-xs"
+              >
                 CRO @ Comercial Maranguape
               </h4>
             </div>
-            <div class="swiper-slide p-8 text-center glass-effect rounded-3xl">
-              <p class="text-xl italic mb-6">
+
+            <div
+              class="swiper-slide p-10 text-center glass-effect rounded-[2rem]"
+            >
+              <p
+                class="text-lg md:text-xl italic mb-8 text-gray-300 leading-relaxed"
+              >
                 "Profissional excepcional, sempre buscando a excelência no
                 front. Sua dedicação e paixão pelo trabalho são inspiradoras. Um
                 exemplo de comprometimento e ética."
               </p>
-              <h4 class="font-bold text-brand-blue">
+              <h4
+                class="font-bold text-brand-cyan uppercase tracking-widest text-xs"
+              >
                 Backend @ Atacado do Lojista
               </h4>
             </div>
           </div>
+          <div class="swiper-pagination !static mt-10"></div>
         </div>
       </div>
     </section>
 
-    <section id="contato" class="py-20 bg-white/5">
+    <footer id="contato" class="py-24 border-t border-white/5 bg-[#030303]">
       <div class="container mx-auto px-6 max-w-5xl">
-        <div class="flex flex-col md:flex-row gap-12">
+        <div class="flex flex-col md:flex-row gap-20">
           <div class="md:w-1/2">
-            <h2 class="text-4xl font-bold mb-4 italic">
-              Vamos elevar seu projeto?
+            <h2 class="text-5xl font-bold mb-6 tracking-tighter italic">
+              Vamos projetar o <br /><span class="text-brand-cyan"
+                >próximo nível?</span
+              >
             </h2>
-            <p class="text-gray-400 mb-8 italic">
-              Estou pronto para novos desafios técnicos e colaborações.
+            <p class="text-gray-500 mb-10 leading-relaxed">
+              Disponível para consultoria técnica em arquitetura frontend,
+              integrações de sistemas e automações estratégicas.
             </p>
 
             <div class="space-y-4">
               <a
                 href="https://wa.me/5584999043539"
-                class="flex items-center gap-4 bg-green-600/20 text-green-400 p-4 rounded-2xl hover:bg-green-600/30 transition"
+                class="flex items-center justify-between glass-effect p-5 rounded-2xl hover:border-brand-cyan/50 transition group"
               >
-                <span>WhatsApp Chat</span>
+                <span class="font-bold">WhatsApp</span>
+                <span class="text-brand-cyan">→</span>
               </a>
               <a
-                href="/assets/docs/Currículo-JonathanCosta.pdf"
+                href="./assets/docs/Currículo-JonathanCosta.pdf"
                 download
-                class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl hover:bg-white/20 transition"
+                class="flex items-center justify-between glass-effect p-5 rounded-2xl hover:bg-white/5 transition"
               >
-                <span>Baixar Currículo (PDF)</span>
+                <span class="font-bold">Download Technical CV</span>
+                <span class="text-gray-500">PDF</span>
               </a>
             </div>
           </div>
 
-          <div class="md:w-1/2 glass-effect p-8 rounded-3xl">
-            <form class="space-y-4">
+          <div class="md:w-1/2 glass-effect p-10 rounded-[2.5rem]">
+            <form class="space-y-5">
               <input
                 type="text"
-                placeholder="Seu Nome"
-                class="w-full bg-black/40 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-brand-blue"
+                placeholder="Nome Completo"
+                class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-brand-cyan outline-none transition"
               />
               <textarea
-                placeholder="Sua Mensagem"
+                placeholder="Descreva brevemente seu desafio técnico"
                 rows="4"
-                class="w-full bg-black/40 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-brand-blue"
+                class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-brand-cyan outline-none transition"
               ></textarea>
               <button
-                class="w-full bg-brand-blue py-4 rounded-xl font-bold shadow-lg shadow-purple-500/20 hover:scale-[1.02] transition"
+                class="w-full bg-brand-cyan text-black py-5 rounded-xl font-bold hover:scale-[1.02] transition shadow-2xl shadow-brand-cyan/20 uppercase tracking-widest text-xs"
               >
                 Enviar Mensagem
               </button>
             </form>
           </div>
         </div>
+        <p
+          class="mt-20 text-center text-gray-700 text-[10px] uppercase tracking-widest"
+        >
+          Jonathan Costa &copy; 2025 | Software Engineering Mindset
+        </p>
       </div>
-    </section>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      // Config do Carrossel de Projetos
-      new Swiper(".projectSwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: { el: ".swiper-pagination", clickable: true },
-        breakpoints: { 768: { slidesPerView: 2 } },
-      });
-
-      // Config do Carrossel de Recomendações (Auto-play)
+      // Testemunhos
       new Swiper(".recommendationSwiper", {
         loop: true,
-        autoplay: { delay: 4000, disableOnInteraction: false },
+        autoplay: { delay: 5000 },
+        pagination: { el: ".swiper-pagination", clickable: true },
       });
 
-      async function initGithubCarousel() {
-        const username = "jonathandcosta";
-        const wrapper = document.getElementById("github-projects-wrapper");
+      // Menu Mobile
+      const menuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuButton.addEventListener("click", () =>
+        mobileMenu.classList.toggle("hidden"),
+      );
 
+      // GitHub API Logic
+      async function initGithubCarousel() {
+        const wrapper = document.getElementById("github-projects-wrapper");
         try {
           const response = await fetch(
-            `https://api.github.com/users/jonathandcosta/repos?per_page=100&sort=updated`
+            `https://api.github.com/users/jonathandcosta/repos?per_page=100&sort=updated`,
           );
           const repos = await response.json();
+          const featured = repos.filter((repo) => repo.stargazers_count > 0);
 
-          // Filtro: Repositórios com Estrela (sua regra)
-          const featuredRepos = repos.filter(
-            (repo) => repo.stargazers_count > 0
-          );
-
-          wrapper.innerHTML = ""; // Limpa o carregando
-
-          featuredRepos.forEach((repo) => {
-            const slide = `
-        <div class="swiper-slide h-auto">
-          <div class="bg-white/5 border border-white/10 p-8 rounded-2xl h-full flex flex-col justify-between hover:border-brand-gold/50 transition-all group">
-            <div>
-              <div class="flex justify-between items-start mb-6">
-                <span class="text-[10px] font-mono text-brand-gold bg-brand-gold/10 border border-brand-gold/30 px-2 py-1 rounded uppercase">
-                  ${repo.language || "Full Stack"}
-                </span>
-                <span class="text-gray-500 text-xs">★ ${
-                  repo.stargazers_count
-                }</span>
-              </div>
-              
-              <h3 class="text-xl font-bold text-white mb-4 group-hover:text-brand-gold transition-colors">
-                ${repo.name.replace(/-/g, " ")}
-              </h3>
-              
-              <p class="text-gray-400 text-sm leading-relaxed line-clamp-4">
-                ${
-                  repo.description ||
-                  "Solução desenvolvida com foco em escalabilidade e performance para ecossistemas de e-commerce."
-                }
-              </p>
-            </div>
-
-            <div class="mt-8 flex items-center justify-between">
-              <a href="${
-                repo.html_url
-              }" target="_blank" class="text-gray-500 hover:text-white transition">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-              <a href="${
-                repo.homepage || "#"
-              }" target="_blank" class="text-brand-gold font-bold text-xs uppercase tracking-tighter hover:underline">
-                Acessar Projeto ↗
-              </a>
-            </div>
-          </div>
-        </div>
-      `;
-            wrapper.innerHTML += slide;
+          wrapper.innerHTML = "";
+          featured.forEach((repo) => {
+            wrapper.innerHTML += `
+              <div class="swiper-slide h-auto">
+                <div class="bg-white/5 border border-white/5 p-8 rounded-3xl h-full flex flex-col justify-between hover:border-brand-cyan transition-all group">
+                  <div>
+                    <div class="flex justify-between items-center mb-6">
+                      <span class="text-[9px] font-bold text-brand-cyan bg-brand-cyan/10 px-2 py-1 rounded uppercase tracking-widest">
+                        ${repo.language || "Module"}
+                      </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 group-hover:text-brand-cyan transition">
+                      ${repo.name.replace(/-/g, " ")}
+                    </h3>
+                    <p class="text-gray-500 text-sm leading-relaxed line-clamp-3">
+                      ${repo.description || "Arquitetura técnica focada em modularidade e eficiência sistêmica."}
+                    </p>
+                  </div>
+                  <div class="mt-8 flex items-center justify-between border-t border-white/5 pt-6">
+                    <a href="${repo.html_url}" target="_blank" class="text-xs font-bold hover:text-brand-cyan transition">CODE</a>
+                    <a href="${repo.homepage || "#"}" target="_blank" class="text-brand-cyan text-xs font-bold hover:underline">VIEW LIVE</a>
+                  </div>
+                </div>
+              </div>`;
           });
 
-          // INICIALIZA O SWIPER APÓS O CARREGAMENTO
           new Swiper(".github-swiper", {
             slidesPerView: 1.2,
-            spaceBetween: 20,
-            grabCursor: true,
+            spaceBetween: 24,
             navigation: {
               nextEl: ".swiper-button-next-custom",
               prevEl: ".swiper-button-prev-custom",
             },
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
             breakpoints: {
-              640: { slidesPerView: 2.2, spaceBetween: 30 },
-              1024: { slidesPerView: 3.2, spaceBetween: 40 },
+              768: { slidesPerView: 2.2 },
+              1024: { slidesPerView: 3.2 },
             },
           });
-        } catch (error) {
-          wrapper.innerHTML =
-            '<p class="text-red-500">Erro ao carregar projetos.</p>';
+        } catch (e) {
+          wrapper.innerHTML = "<p>Falha ao conectar à API.</p>";
         }
       }
-
       initGithubCarousel();
-
-      const menuButton = document.getElementById("mobile-menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      menuButton.addEventListener("click", () => {
-        // Alterna a visibilidade do menu
-        mobileMenu.classList.toggle("hidden");
-
-        // Opcional: Animação básica ou troca de ícone pode ser feita aqui
-      });
-
-      // Fecha o menu ao clicar em qualquer link
-      const mobileLinks = mobileMenu.querySelectorAll("a");
-      mobileLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-        });
-      });
     </script>
   </body>
 </html>
