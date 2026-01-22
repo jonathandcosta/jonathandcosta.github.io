@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -8,15 +8,14 @@
       href="./assets/icon/favicon_green.svg"
       type="image/svg+xml"
     />
-    <title>Jonathan Costa | Trajetória e Liderança</title>
+    <title>Jonathan Costa | Liderança & Trajetória</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              "brand-blue": "#4ADE80",
-              "brand-purple": "#8b5cf6", // Mantendo a identidade do seu projeto .dev
+              "brand-green": "#4ADE80",
               "dark-bg": "#0a0a0a",
             },
           },
@@ -26,10 +25,18 @@
     <style>
       .glass {
         background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(12px);
       }
       .profile-blob {
         border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      }
+      .timeline-gradient {
+        background: linear-gradient(
+          to bottom,
+          #4ade80,
+          rgba(74, 222, 128, 0.1),
+          transparent
+        );
       }
     </style>
   </head>
@@ -37,20 +44,26 @@
     <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 py-4">
       <div class="container mx-auto px-6 flex justify-between items-center">
         <a href="index.html" class="font-bold tracking-tighter text-xl">
-          Jonathan<span class="text-brand-blue">Costa</span>
+          Jonathan<span class="text-brand-green">Costa</span>
         </a>
-        <div class="hidden md:flex space-x-8 text-sm font-medium">
-          <a href="#about" class="hover:text-brand-blue transition">Início</a>
-          <a href="#historia" class="hover:text-brand-blue transition"
-            >Minha História</a
+
+        <div
+          class="hidden md:flex space-x-6 text-[10px] font-bold uppercase tracking-widest"
+        >
+          <a href="index.html" class="hover:text-brand-green transition"
+            >Início</a
           >
-          <a href="#experiencia" class="hover:text-brand-blue transition"
-            >Experiência</a
+          <a href="front.html" class="hover:text-brand-green transition"
+            >Engenharia</a
+          >
+          <a href="commerce.html" class="hover:text-brand-green transition"
+            >Produto & Estratégia</a
           >
         </div>
+
         <a
           href="#contato"
-          class="hidden md:block bg-brand-blue px-5 py-2 rounded-full text-sm font-bold hover:bg-green-900 transition"
+          class="bg-brand-green text-black px-5 py-2 rounded-full text-xs font-bold hover:bg-white transition"
           >Contato</a
         >
       </div>
@@ -62,42 +75,51 @@
       >
         <div class="order-2 md:order-1">
           <span
-            class="text-brand-blue font-mono tracking-widest text-sm uppercase mb-4 block"
-            >Sobre mim</span
+            class="text-brand-green font-mono tracking-widest text-sm uppercase mb-4 block"
+            >Executive Profile</span
           >
           <h1
             class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter italic"
           >
-            Liderança que <span class="text-brand-blue">Codifica.</span>
+            Liderança que <span class="text-brand-green">Escala.</span>
           </h1>
           <p class="text-gray-400 text-lg leading-relaxed mb-8">
-            Bacharel em Ciência da Computação com uma jornada moldada pela
-            gestão de grandes equipes e pela paixão em resolver problemas
-            complexos através da tecnologia.
+            Bacharel em Ciência da Computação com DNA executivo. Minha
+            trajetória é definida pela gestão de alta performance, unindo
+            inteligência cultural e técnica para liderar equipes
+            multidisciplinares rumo a resultados globais.
           </p>
-          <div class="flex gap-4 border-l-2 border-brand-blue/30 pl-6 py-2">
+          <div class="flex gap-8 border-l-2 border-brand-green/30 pl-6 py-2">
             <div>
-              <p class="text-2xl font-bold">+300</p>
-              <p class="text-xs text-gray-500 uppercase">Pessoas Lideradas</p>
+              <p class="text-3xl font-bold">+300</p>
+              <p
+                class="text-[10px] text-gray-500 uppercase font-bold tracking-tighter"
+              >
+                Pessoas Lideradas
+              </p>
             </div>
-            <div class="ml-8">
-              <p class="text-2xl font-bold">6</p>
-              <p class="text-xs text-gray-500 uppercase">Meses nos EUA</p>
+            <div>
+              <p class="text-3xl font-bold">INTL</p>
+              <p
+                class="text-[10px] text-gray-500 uppercase font-bold tracking-tighter"
+              >
+                Vivência nos EUA
+              </p>
             </div>
           </div>
         </div>
         <div class="order-1 md:order-2 flex justify-center">
           <div class="relative">
             <div
-              class="absolute inset-0 bg-brand-blue blur-[100px] opacity-20"
+              class="absolute inset-0 bg-brand-green blur-[100px] opacity-10"
             ></div>
             <div
-              class="w-64 h-64 md:w-80 md:h-80 overflow-hidden profile-blob border-2 border-brand-blue/30 relative z-10"
+              class="w-64 h-64 md:w-80 md:h-80 overflow-hidden profile-blob border-2 border-brand-green/30 relative z-10"
             >
               <img
                 src="./assets/img/jdc_photo.jpg"
                 alt="Jonathan Costa"
-                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
           </div>
@@ -105,103 +127,74 @@
       </div>
     </section>
 
-    <section id="historia" class="py-16 bg-white/5">
+    <section id="historia" class="py-20 bg-white/[0.02]">
       <div class="container mx-auto px-6 max-w-4xl">
-        <h2
-          class="text-2xl font-bold mb-8 text-brand-blue uppercase tracking-widest text-center"
-        >
-          Minha História
+        <h2 class="text-3xl font-bold mb-12 italic text-center">
+          A Intersecção entre
+          <span class="text-brand-green">Pessoas e Sistemas</span>
         </h2>
-        <div class="space-y-6 text-gray-300 text-lg leading-relaxed italic">
-          <p>
-            Minha carreira não começou no código, mas na <b>liderança</b>.
-            Gerenciei equipes de mais de 300 pessoas em organizações como
-            ABIJCSUD e Royal Prestige, onde aprendi que a tecnologia só é
-            valiosa quando serve às pessoas e aos resultados de negócio.
+        <div class="space-y-8 text-gray-300 text-lg leading-relaxed">
+          <p class="italic border-l-4 border-brand-green/20 pl-6">
+            "Minha carreira foi forjada na liderança. Gerenciei operações
+            complexas para organizações como ABIJCSUD e Royal Prestige, onde
+            aprendi que a tecnologia só atinge seu potencial máximo quando está
+            alinhada à cultura organizacional e aos KPIs de negócio."
           </p>
           <p>
-            Com a graduação em <b>Ciência da Computação</b>, uni essa visão
-            executiva à capacidade técnica de construir sistemas. Minha
-            experiência internacional (6 meses nos EUA) e o trabalho voluntário
-            como Coordenador do "Mãos Que Ajudam" me deram a adaptabilidade
-            necessária para trabalhar em ambientes globais e multidisciplinares.
-          </p>
-          <p>
-            Hoje, atuo na intersecção entre o
-            <b>Desenvolvimento de Software (Next.js/React)</b> e a
-            <b>Estratégia de E-commerce</b>, sempre buscando automatizar o que é
-            manual e escalar o que é lucrativo.
+            Com a formação em <b>Ciência da Computação</b>, conectei essa visão
+            executiva à engenharia de software. Minha experiência internacional
+            e a liderança no programa "Mãos Que Ajudam" me permitiram
+            desenvolver uma comunicação intercultural fluida, essencial para
+            atuar como <b>Product Owner ou Product Manager</b> em ambientes
+            globais.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="py-20 bg-black">
+    <section id="skills" class="py-24">
       <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-12">
+        <div class="grid md:grid-cols-2 gap-16">
           <div>
-            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3 italic">
-              <span class="w-8 h-[2px] bg-brand-blue"></span> Hard Skills
+            <h2
+              class="text-2xl font-bold mb-10 flex items-center gap-4 italic uppercase tracking-tighter"
+            >
+              <span class="w-12 h-[1px] bg-brand-green"></span> Strategic Skills
             </h2>
-            <div class="grid grid-cols-2 gap-4">
-              <div class="glass p-4 rounded-xl border border-white/5">
-                <h4
-                  class="text-brand-blue font-bold text-sm mb-2 uppercase tracking-tighter"
-                >
-                  Frontend
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="glass p-5 rounded-2xl border border-white/5">
+                <h4 class="text-brand-green font-bold text-xs mb-2 uppercase">
+                  Gestão de Produto (PO)
                 </h4>
-                <p class="text-xs text-gray-400">
-                  Next.js, React, Tailwind CSS, JavaScript ES6.
+                <p class="text-[12px] text-gray-500">
+                  Priorização de Backlog, Escrita de User Stories e alinhamento
+                  técnico-comercial.
                 </p>
               </div>
-              <div class="glass p-4 rounded-xl border border-white/5">
-                <h4
-                  class="text-brand-blue font-bold text-sm mb-2 uppercase tracking-tighter"
-                >
-                  E-commerce
+              <div class="glass p-5 rounded-2xl border border-white/5">
+                <h4 class="text-brand-green font-bold text-xs mb-2 uppercase">
+                  Business Intelligence
                 </h4>
-                <p class="text-xs text-gray-400">
-                  VTEX, Tray, Nuvemshop, Integrações ERP.
+                <p class="text-[12px] text-gray-500">
+                  Métricas de eficiência (ROI, CAC, LTV) e Dashboards em Power
+                  BI.
                 </p>
               </div>
-              <div class="glass p-4 rounded-xl border border-white/5">
-                <h4
-                  class="text-brand-blue font-bold text-sm mb-2 uppercase tracking-tighter"
-                >
-                  Automação
+              <div class="glass p-5 rounded-2xl border border-white/5">
+                <h4 class="text-brand-green font-bold text-xs mb-2 uppercase">
+                  Metodologias Ágeis
                 </h4>
-                <p class="text-xs text-gray-400">
-                  Python (RPA), Scripts Outlook, API Integration, IA.
+                <p class="text-[12px] text-gray-500">
+                  Facilitação de cerimônias Scrum e gestão de fluxo via Kanban.
                 </p>
               </div>
-              <div class="glass p-4 rounded-xl border border-white/5">
-                <h4
-                  class="text-brand-blue font-bold text-sm mb-2 uppercase tracking-tighter"
-                >
-                  Data & Analytics
+              <div class="glass p-5 rounded-2xl border border-white/5">
+                <h4 class="text-brand-green font-bold text-xs mb-2 uppercase">
+                  Marketplace & E-commerce
                 </h4>
-                <p class="text-xs text-gray-400">
-                  Power BI, Excel Medium, Google Analytics, ADS.
-                </p>
-              </div>
-              <div class="glass p-4 rounded-xl border border-white/5">
-                <h4
-                  class="text-brand-blue font-bold text-sm mb-2 uppercase tracking-tighter"
-                >
-                  Gestão Ágil
-                </h4>
-                <p class="text-xs text-gray-400">
-                  Scrum, Kanban, Gestão de Backlog e cerimônias ágeis.
-                </p>
-              </div>
-              <div class="glass p-4 rounded-xl border border-white/5">
-                <h4
-                  class="text-brand-blue font-bold text-sm mb-2 uppercase tracking-tighter"
-                >
-                  Estratégico Tech
-                </h4>
-                <p class="text-xs text-gray-400">
-                  Orçamentos, Campanhas, Metas, KPIs, Desempenho.
+                <p class="text-[12px] text-gray-500">
+                  Arquitetura de canais de venda direta e fluxos automatizados
+                  de faturamento.
                 </p>
               </div>
             </div>
@@ -209,48 +202,53 @@
 
           <div>
             <h2
-              class="text-2xl font-bold mb-8 flex items-center gap-3 italic text-right justify-end"
+              class="text-2xl font-bold mb-10 flex items-center gap-4 italic uppercase tracking-tighter justify-end text-right"
             >
-              Soft Skills <span class="w-8 h-[2px] bg-brand-blue"></span>
+              Leadership Skills
+              <span class="w-12 h-[1px] bg-brand-green"></span>
             </h2>
             <div class="space-y-4">
               <div
-                class="flex items-center gap-4 glass p-4 rounded-xl border border-white/5 hover:bg-brand-blue/5 transition"
+                class="flex items-center gap-4 glass p-4 rounded-2xl border border-white/5 group hover:bg-brand-green/5 transition"
               >
                 <div
-                  class="bg-brand-blue/10 p-2 rounded-lg text-brand-blue italic font-bold"
+                  class="bg-brand-green/10 p-3 rounded-xl text-brand-green font-bold"
                 >
                   LDR
                 </div>
                 <div>
                   <h4 class="text-sm font-bold">
-                    Liderança de Equipes (+300 pessoas)
+                    Liderança de Alta Performance
                   </h4>
-                  <p class="text-xs text-gray-500">
-                    Gestão de conflitos e desenvolvimento de talentos.
+                  <p
+                    class="text-[11px] text-gray-500 uppercase tracking-widest"
+                  >
+                    Gestão de conflitos e escala de talentos.
                   </p>
                 </div>
               </div>
               <div
-                class="flex items-center gap-4 glass p-4 rounded-xl border border-white/5 hover:bg-brand-blue/5 transition"
+                class="flex items-center gap-4 glass p-4 rounded-2xl border border-white/5 group hover:bg-brand-green/5 transition"
               >
                 <div
-                  class="bg-brand-blue/10 p-2 rounded-lg text-brand-blue italic font-bold"
+                  class="bg-brand-green/10 p-3 rounded-xl text-brand-green font-bold"
                 >
-                  COM
+                  GLB
                 </div>
                 <div>
                   <h4 class="text-sm font-bold">Comunicação Intercultural</h4>
-                  <p class="text-xs text-gray-500">
-                    Experiência global com times dos EUA e América Latina.
+                  <p
+                    class="text-[11px] text-gray-500 uppercase tracking-widest"
+                  >
+                    Experiência global com times EUA e LATAM.
                   </p>
                 </div>
               </div>
-              <div
-                class="flex items-center gap-4 glass p-4 rounded-xl border border-white/5 hover:bg-brand-blue/5 transition"
+              <!-- <div
+                class="flex items-center gap-4 glass p-4 rounded-2xl border border-white/5 group hover:bg-brand-green/5 transition"
               >
                 <div
-                  class="bg-brand-blue/10 p-2 rounded-lg text-brand-blue italic font-bold"
+                  class="bg-brand-green/10 p-3 rounded-xl text-brand-green font-bold"
                 >
                   EST
                 </div>
@@ -258,11 +256,14 @@
                   <h4 class="text-sm font-bold">
                     Visão Estratégica de Negócio
                   </h4>
-                  <p class="text-xs text-gray-500">
-                    Foco em ROI, conversão e otimização de custos.
+                  <p
+                    class="text-[11px] text-gray-500 uppercase tracking-widest"
+                  >
+                    Foco em alinhamento entre tecnologia e estratégia de
+                    negócios.
                   </p>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -271,49 +272,21 @@
 
     <section id="experiencia" class="py-24 bg-white/[0.02]">
       <div class="container mx-auto px-6 max-w-4xl">
-        <h2 class="text-3xl font-bold mb-16 text-center italic">
-          Minha <span class="text-brand-blue">Cronologia</span> Profissional
+        <h2
+          class="text-3xl font-bold mb-20 text-center italic tracking-tighter"
+        >
+          Cronologia de <span class="text-brand-green">Impacto</span>
         </h2>
 
         <div
-          class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-brand-blue before:via-brand-blue/30 before:to-transparent"
+          class="relative space-y-16 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[1px] before:bg-brand-green/20"
         >
+          <!-- BRAZZ BRAZZ -->
           <div
             class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
           >
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
-            >
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"
-                />
-              </svg>
-            </div>
-            <div
-              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition"
-            >
-              <div class="flex items-center justify-between mb-1">
-                <div class="font-bold text-white text-xl uppercase italic">
-                  E-commerce Specialist
-                </div>
-                <time class="font-mono text-xs text-brand-blue font-semibold"
-                  >Presente</time
-                >
-              </div>
-              <div class="text-gray-500 text-sm mb-4">Brazz Brazz</div>
-              <p class="text-gray-400 text-sm">
-                Supervisão de operações de e-commerce com foco em automação de
-                processos e aumento de conversão.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
-          >
-            <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-green shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-brand-green group-hover:text-black transition-colors"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
@@ -323,94 +296,70 @@
               </svg>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition"
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-8 rounded-3xl border border-white/5 hover:border-brand-green/30 transition"
             >
-              <div class="flex items-center justify-between mb-1">
-                <div class="font-bold text-white text-xl uppercase italic">
-                  E-commerce Specialist
-                </div>
-                <time class="font-mono text-xs text-brand-blue font-semibold"
-                  >2025</time
+              <div class="flex flex-col mb-4">
+                <span
+                  class="text-[10px] font-bold text-brand-green uppercase tracking-[0.2em] mb-1"
+                  >E-commerce Specialist (PO/PM)</span
                 >
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="text-xl font-bold">Brazz Brazz</h3>
+                  <time class="font-mono text-xs text-brand-green font-semibold"
+                    >2025</time
+                  >
+                </div>
               </div>
-              <div class="text-gray-500 text-sm mb-4">Super Giro</div>
-              <p class="text-gray-400 text-sm">
-                Focado em automação de fluxos em marketplaces e consultoria
-                estratégica para aumento de conversão.
+              <p class="text-gray-400 text-sm leading-relaxed italic">
+                Direcionamento estratégico focado em aumento de conversão e
+                arquitetura de SEO, resultando em 66% de crescimento no volume
+                de pedidos.
               </p>
             </div>
           </div>
 
+          <!-- ESTÁGIO CRC-RN -->
           <div
             class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
           >
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-green shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-brand-green group-hover:text-black transition-colors"
             >
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"
                 />
               </svg>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition"
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-8 rounded-3xl border border-white/5 hover:border-brand-green/30 transition"
             >
-              <div class="flex items-center justify-between mb-1">
-                <div class="font-bold text-white text-xl uppercase italic">
-                  Estágio em TI
-                </div>
-                <time class="font-mono text-xs text-brand-blue font-semibold"
-                  >2025</time
+              <div class="flex flex-col mb-4">
+                <span
+                  class="text-[10px] font-bold text-brand-green uppercase tracking-[0.2em] mb-1"
+                  >Infrastructure & Automation (RPA)</span
                 >
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="text-xl font-bold">CRC-RN</h3>
+                  <time class="font-mono text-xs text-brand-green font-semibold"
+                    >2025</time
+                  >
+                </div>
               </div>
-              <div class="text-gray-500 text-sm mb-4">CRC-RN</div>
-              <p class="text-gray-400 text-sm">
-                Suporte a usuários (contadores, auxiliares) em sistemas de
-                gestão (ERP), resolução de problemas de hardware/software,
-                instalação de programas.
+              <p class="text-gray-400 text-sm leading-relaxed italic">
+                Estágio em TI focado em automação de processos internos via RPA
+                (Robotic Process Automation), suporte à infraestrutura de redes
+                e gestão de sistemas.
               </p>
             </div>
           </div>
 
+          <!-- SUPER GIRO -->
           <div
             class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
           >
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
-            >
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"
-                />
-              </svg>
-            </div>
-            <div
-              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5"
-            >
-              <div class="flex items-center justify-between mb-1">
-                <div
-                  class="font-bold text-white text-xl italic uppercase font-mono uppercase"
-                >
-                  Ciência da Computação
-                </div>
-                <time class="font-mono text-xs text-brand-blue italic"
-                  >Bacharelado</time
-                >
-              </div>
-              <div class="text-gray-500 text-sm mb-4">UnP - Natal/RN</div>
-              <p class="text-gray-400 text-sm italic">
-                Fundação teórica robusta para construção de arquiteturas
-                escaláveis e engenharia de software.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
-          >
-            <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-green shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-brand-green group-hover:text-black transition-colors"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
@@ -420,98 +369,70 @@
               </svg>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition"
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-8 rounded-3xl border border-white/5 hover:border-brand-green/30 transition"
             >
-              <div class="flex items-center justify-between mb-1">
-                <div class="font-bold text-white text-xl uppercase italic">
-                  E-commerce Specialist
-                </div>
-                <time class="font-mono text-xs text-brand-blue font-semibold"
-                  >2024</time
+              <div class="flex flex-col mb-4">
+                <span
+                  class="text-[10px] font-bold text-brand-green uppercase tracking-[0.2em] mb-1"
+                  >E-commerce Specialist (PO/PM)</span
                 >
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="text-xl font-bold">Super Giro</h3>
+                  <time class="font-mono text-xs text-brand-green font-semibold"
+                    >2025</time
+                  >
+                </div>
               </div>
-              <div class="text-gray-500 text-sm mb-4">
-                Atacado do Lojista | CM
-              </div>
-              <p class="text-gray-400 text-sm">
-                Supervisor do e-commerce, liderando equipes de atendimento,
-                vendas, e Marketing focado em resultados trazendo um faturamento
-                previsível e escalável.
+              <p class="text-gray-400 text-sm leading-relaxed italic">
+                Reestruturação completa da arquitetura do site com foco em Core
+                Web Vitals e UX, resultando em aumento de 66% no volume de
+                pedidos e otimização para picos de tráfego orgânico.
               </p>
             </div>
           </div>
 
+          <!-- FRONTEND EBAC-->
           <div
             class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
           >
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-green shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-brand-green group-hover:text-black transition-colors"
             >
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"
                 />
               </svg>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5"
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-8 rounded-3xl border border-white/5 hover:border-brand-green/30 transition"
             >
-              <div class="flex items-center justify-between mb-1">
-                <div
-                  class="font-bold text-white text-xl italic uppercase font-mono uppercase"
+              <div class="flex flex-col mb-4">
+                <span
+                  class="text-[10px] font-bold text-brand-green uppercase tracking-[0.2em] mb-1"
+                  >Engenheria Frontend</span
                 >
-                  Engenharia Frontend
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="text-xl font-bold">EBAC</h3>
+                  <time class="font-mono text-xs text-brand-green font-semibold"
+                    >2024</time
+                  >
                 </div>
-                <time class="font-mono text-xs text-brand-blue italic"
-                  >2024</time
-                >
               </div>
-              <div class="text-gray-500 text-sm mb-4">EBAC</div>
-              <p class="text-gray-400 text-sm italic">
-                Formação técnica na prática em desenvolvimento frontend com foco
-                em React e Next.js.
+              <p class="text-gray-400 text-sm leading-relaxed italic">
+                Formação intensiva em desenvolvimento Frontend, com foco em
+                React, JavaScript, HTML5 e CSS3, capacitando-me a construir
+                interfaces de usuário responsivas e dinâmicas.
               </p>
             </div>
           </div>
 
+          <!-- ATACADO DO LOJISTA -->
           <div
             class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
           >
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
-            >
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"
-                />
-              </svg>
-            </div>
-            <div
-              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5"
-            >
-              <div class="flex items-center justify-between mb-1">
-                <div
-                  class="font-bold text-white text-xl italic uppercase font-mono uppercase"
-                >
-                  Front End & UX/UI Design
-                </div>
-                <time class="font-mono text-xs text-brand-blue italic"
-                  >2023</time
-                >
-              </div>
-              <div class="text-gray-500 text-sm mb-4">Origamid</div>
-              <p class="text-gray-400 text-sm italic">
-                Formação prática em desenvolvimento Front End com foco em
-                experiência do usuário (UX) e design de interfaces (UI).
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
-          >
-            <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-green shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-brand-green group-hover:text-black transition-colors"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
@@ -521,29 +442,70 @@
               </svg>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition"
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-8 rounded-3xl border border-white/5 hover:border-brand-green/30 transition"
             >
-              <div class="flex items-center justify-between mb-1">
-                <div class="font-bold text-white text-xl uppercase italic">
-                  Auxiliar de Desenvolvimento
-                </div>
-                <time class="font-mono text-xs text-brand-blue font-semibold"
-                  >2023</time
+              <div class="flex flex-col mb-4">
+                <span
+                  class="text-[10px] font-bold text-brand-green uppercase tracking-[0.2em] mb-1"
+                  >E-commerce Specialist (PO/PM)</span
                 >
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="text-xl font-bold">Atacado do Lojista</h3>
+                  <time class="font-mono text-xs text-brand-green font-semibold"
+                    >2024</time
+                  >
+                </div>
               </div>
-              <div class="text-gray-500 text-sm mb-4">Comercial Maranguape</div>
-              <p class="text-gray-400 text-sm">
-                Desenvolvimento de sistemas e suporte técnico para otimização de
-                processos internos e automação de tarefas manuais.
+              <p class="text-gray-400 text-sm leading-relaxed italic">
+                Orquestração de integrações complexas entre ERP e Gateways de
+                pagamento, focando na redução de latência no processamento de
+                pedidos e na criação de uma jornada de compra fluida e segura.
               </p>
             </div>
           </div>
 
+          <!-- UI UX FRONTEND  -->
           <div
             class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
           >
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-blue shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-green shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-brand-green group-hover:text-black transition-colors"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-8 rounded-3xl border border-white/5 hover:border-brand-green/30 transition"
+            >
+              <div class="flex flex-col mb-4">
+                <span
+                  class="text-[10px] font-bold text-brand-green uppercase tracking-[0.2em] mb-1"
+                  >Frontend & UI/UX Design</span
+                >
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="text-xl font-bold">Origamid</h3>
+                  <time class="font-mono text-xs text-brand-green font-semibold"
+                    >2023</time
+                  >
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed italic">
+                Curso especializado em design de interfaces e experiência do
+                usuário, complementando minhas habilidades técnicas com uma
+                abordagem centrada no usuário para desenvolvimento frontend.
+              </p>
+            </div>
+          </div>
+
+          <!-- COMERCIAL MARANGUAPE -->
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-green shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-brand-green group-hover:text-black transition-colors"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
@@ -553,22 +515,131 @@
               </svg>
             </div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[45%] glass p-6 rounded-2xl border border-white/5"
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-8 rounded-3xl border border-white/5 hover:border-brand-green/30 transition"
             >
-              <div class="flex items-center justify-between mb-1">
-                <div class="font-bold text-white text-xl italic uppercase">
-                  Supervisor Geral
-                </div>
-                <time class="font-mono text-xs text-brand-blue"
-                  >2020 - 2023</time
+              <div class="flex flex-col mb-4">
+                <span
+                  class="text-[10px] font-bold text-brand-green uppercase tracking-[0.2em] mb-1"
+                  >Auxiliar de Desenvolvimento</span
                 >
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="text-xl font-bold">Comercial Maranguape</h3>
+                  <time class="font-mono text-xs text-brand-green font-semibold"
+                    >2023</time
+                  >
+                </div>
               </div>
-              <div class="text-gray-500 text-sm mb-4">
-                Royal Prestige | ABIJCSUD
+              <p class="text-gray-400 text-sm leading-relaxed italic">
+                Desenvolvimento de sistemas internos para otimização de
+                processos logísticos e de vendas, utilizando linguagens como
+                React, Python e JavaScript.
+              </p>
+            </div>
+          </div>
+
+          <!-- FACULDADE -->
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-green shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-brand-green group-hover:text-black transition-colors"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-8 rounded-3xl border border-white/5 hover:border-brand-green/30 transition"
+            >
+              <div class="flex flex-col mb-4">
+                <span
+                  class="text-[10px] font-bold text-brand-green uppercase tracking-[0.2em] mb-1"
+                  >Ciência da Computação</span
+                >
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="text-xl font-bold">UNP</h3>
+                  <time class="font-mono text-xs text-brand-green font-semibold"
+                    >2020</time
+                  >
+                </div>
               </div>
-              <p class="text-gray-400 text-sm">
-                Liderança direta de mais de 300 pessoas. Implementação de KPIs e
-                gestão de faturamento em larga escala.
+              <p class="text-gray-400 text-sm leading-relaxed italic">
+                Bacharelado em Ciência da Computação com foco em desenvolvimento
+                de software, estruturas de dados, gerenciamento de projetos e
+                redes de computadores.
+              </p>
+            </div>
+          </div>
+
+          <!-- ROYAL PRESTIGE -->
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-green shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-brand-green group-hover:text-black transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                <path
+                  d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1l-1-1H8L7 5H4z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-8 rounded-3xl border border-white/5 hover:border-brand-green/30 transition"
+            >
+              <div class="flex flex-col mb-4">
+                <span
+                  class="text-[10px] font-bold text-brand-green uppercase tracking-[0.2em] mb-1"
+                  >Gerente de Franquias</span
+                >
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="text-xl font-bold">Royal Prestige</h3>
+                  <time class="font-mono text-xs text-brand-green font-semibold"
+                    >2014-2020</time
+                  >
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed italic">
+                Gestão executiva de +300 colaboradores. Implementação de KPIs de
+                produtividade e controle de faturamento em escala regional.
+              </p>
+            </div>
+          </div>
+
+          <!-- IGREJA -->
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black text-brand-green shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:bg-brand-green group-hover:text-black transition-colors"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3.005 3.005 0 013.75-2.906z"
+                />
+              </svg>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[45%] glass p-8 rounded-3xl border border-white/5 hover:border-brand-green/30 transition"
+            >
+              <div class="flex flex-col mb-4">
+                <span
+                  class="text-[10px] font-bold text-brand-green uppercase tracking-[0.2em] mb-1"
+                  >Gerente de Franquias</span
+                >
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="text-xl font-bold">ABIJCSUD</h3>
+                  <time class="font-mono text-xs text-brand-green font-semibold"
+                    >2006-2008</time
+                  >
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed italic">
+                Liderança de projetos sociais com impacto em +500 famílias.
+                Desenvolvimento de parcerias institucionais sem fins lucrativos.
               </p>
             </div>
           </div>
@@ -578,29 +649,30 @@
 
     <footer id="contato" class="py-24 border-t border-white/5">
       <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-12 italic tracking-tighter">
-          Pronto para escalar sua <br />
-          <span class="text-brand-blue underline">operação digital?</span>
+        <h2
+          class="text-4xl font-bold mb-12 italic tracking-tighter leading-tight"
+        >
+          Pronto para adicionar
+          <span class="text-brand-green">senioridade</span> <br />
+          estratégica ao seu time?
         </h2>
         <div class="flex flex-col md:flex-row justify-center gap-6">
           <a
             href="https://wa.me/5584999043539"
-            class="bg-brand-blue px-12 py-5 rounded-2xl font-bold hover:scale-105 transition shadow-xl shadow-blue-500/10"
+            class="bg-brand-green text-black px-12 py-5 rounded-2xl font-bold hover:scale-105 transition shadow-xl shadow-brand-green/10"
           >
-            Falar via WhatsApp
+            Falar com Jonathan
           </a>
           <a
             href="./assets/docs/Currículo-JonathanCosta.pdf"
             download
             class="glass px-12 py-5 rounded-2xl font-bold border border-white/10 hover:bg-white/5 transition"
           >
-            Download CV (PDF)
+            Download Executive CV
           </a>
         </div>
-        <p
-          class="mt-20 text-gray-600 text-xs font-mono uppercase tracking-[0.3em]"
-        >
-          Jonathan Costa &copy; 2025 | ALL RIGHTS RESERVED
+        <p class="mt-20 text-gray-600 text-[11px] uppercase tracking-widest">
+          Jonathan Costa &copy; 2025 | Strategic Leadership
         </p>
       </div>
     </footer>

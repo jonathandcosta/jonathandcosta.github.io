@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonathan Costa | Arquiteto de Soluções E-commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-gold": "#D4AF37",
+              "dark-bg": "#0a0a0a",
+              "card-bg": "#111111",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+      }
+      .text-gradient {
+        background: linear-gradient(to right, #d4af37, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-dark-bg text-white font-sans overflow-x-hidden">
+    <nav
+      class="fixed top-0 w-full z-50 glass-effect border-b border-white/5 py-4"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <span class="font-bold text-xl tracking-tighter">
+          Jonathan<span class="text-brand-gold">Costa.dev</span>
+        </span>
+        <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
+          <a href="index.html" class="hover:text-brand-gold transition"
+            >Início</a
+          >
+          <a href="#solucoes" class="hover:text-brand-gold transition"
+            >Soluções</a
+          >
+          <a href="#cases" class="hover:text-brand-gold transition">Cases</a>
+          <a
+            href="#contato"
+            class="bg-brand-gold text-black px-5 py-2 rounded-full font-bold hover:bg-yellow-500 transition"
+            >Agendar Consultoria</a
+          >
+        </div>
+        <button class="md:hidden text-brand-gold">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <section class="pt-40 pb-24">
+      <div
+        class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <span
+            class="text-brand-gold font-mono text-sm tracking-widest uppercase mb-4 block"
+            >Expertise & Arquitetura</span
+          >
+          <h1
+            class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter leading-none"
+          >
+            Arquiteto de Soluções <span class="text-gradient">E-commerce.</span>
+          </h1>
+          <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl">
+            Especialista em construir ecossistemas digitais de alta performance
+            onde a engenharia de software encontra a lucratividade. Focado em
+            VTEX IO, integrações escaláveis e liderança técnica de produtos.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#cases"
+              class="border border-brand-gold text-brand-gold px-8 py-4 rounded-xl font-bold hover:bg-brand-gold hover:text-black transition"
+              >Ver Projetos</a
+            >
+            <div
+              class="flex items-center gap-3 px-6 py-4 glass-effect rounded-xl border border-white/5"
+            >
+              <span class="text-2xl font-bold text-brand-gold">+300</span>
+              <span class="text-[10px] text-gray-500 uppercase leading-tight"
+                >Colaboradores<br />Liderados</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="relative hidden md:block">
+          <div
+            class="absolute inset-0 bg-brand-gold blur-[120px] opacity-10"
+          ></div>
+          <img
+            src="https://i.ibb.co/L95j18t/Jonathan-Costa-Profissional.jpg"
+            alt="Jonathan Costa"
+            class="relative z-10 w-full max-w-md mx-auto rounded-3xl grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="solucoes" class="py-24 bg-white/[0.02]">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="glass-effect p-8 rounded-3xl border border-white/5 hover:border-brand-gold/30 transition"
+          >
+            <div
+              class="w-12 h-12 bg-brand-gold/10 rounded-xl flex items-center justify-center text-brand-gold mb-6 font-bold italic"
+            >
+              ENG
+            </div>
+            <h3 class="text-xl font-bold mb-4">Software Engineering</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+              Desenvolvimento robusto com Next.js, React e TypeScript.
+              Especialista em arquitetura VTEX IO e integração de REST APIs de
+              alta latência.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-[10px] bg-white/5 px-2 py-1 rounded"
+                >Next.js</span
+              >
+              <span class="text-[10px] bg-white/5 px-2 py-1 rounded"
+                >VTEX IO</span
+              >
+              <span class="text-[10px] bg-white/5 px-2 py-1 rounded">APIs</span>
+            </div>
+          </div>
+          <div
+            class="glass-effect p-8 rounded-3xl border border-white/5 hover:border-brand-gold/30 transition"
+          >
+            <div
+              class="w-12 h-12 bg-brand-gold/10 rounded-xl flex items-center justify-center text-brand-gold mb-6 font-bold italic"
+            >
+              PRO
+            </div>
+            <h3 class="text-xl font-bold mb-4">Product Management</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+              Visão de Product Owner para priorização de backlog baseada em ROI.
+              Gestão de ciclo de vida de produto com foco em conversão e
+              experiência do usuário.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-[10px] bg-white/5 px-2 py-1 rounded"
+                >ROI/LTV</span
+              >
+              <span class="text-[10px] bg-white/5 px-2 py-1 rounded"
+                >Scrum</span
+              >
+              <span class="text-[10px] bg-white/5 px-2 py-1 rounded"
+                >Backlog</span
+              >
+            </div>
+          </div>
+          <div
+            class="glass-effect p-8 rounded-3xl border border-white/5 hover:border-brand-gold/30 transition"
+          >
+            <div
+              class="w-12 h-12 bg-brand-gold/10 rounded-xl flex items-center justify-center text-brand-gold mb-6 font-bold italic"
+            >
+              ARC
+            </div>
+            <h3 class="text-xl font-bold mb-4">Solution Architecture</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+              Orquestração de ecossistemas complexos: ERP ↔ Marketplace ↔
+              E-commerce. Automação de fluxos logísticos e financeiros (RPA).
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-[10px] bg-white/5 px-2 py-1 rounded"
+                >ERP Sync</span
+              >
+              <span class="text-[10px] bg-white/5 px-2 py-1 rounded"
+                >Python RPA</span
+              >
+              <span class="text-[10px] bg-white/5 px-2 py-1 rounded"
+                >Flow Design</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="py-24">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-4xl font-bold mb-16 text-center italic tracking-tighter"
+        >
+          Cases de <span class="text-brand-gold">Escalabilidade</span>
+        </h2>
+        <div class="swiper recSwiper max-w-6xl mx-auto">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide p-4">
+              <div
+                class="bg-card-bg p-10 rounded-3xl border border-white/5 h-full"
+              >
+                <span
+                  class="text-brand-gold font-mono text-xs uppercase tracking-widest block mb-4"
+                  >Engenharia de Integração</span
+                >
+                <h3 class="text-2xl font-bold mb-4">
+                  Automação Cross-Marketplace
+                </h3>
+                <p class="text-gray-400 text-sm italic mb-6">
+                  Desenvolvimento de arquitetura conectando Amazon, ML e Shopee
+                  ao core business, eliminando erros manuais de faturamento e
+                  escala logística.
+                </p>
+                <div class="h-[1px] w-full bg-white/10 my-6"></div>
+                <p class="text-xs text-gray-500">
+                  Tecnologias: ERP Integration, Python RPA, Marketplaces APIs.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide p-4">
+              <div
+                class="bg-card-bg p-10 rounded-3xl border border-white/5 h-full"
+              >
+                <span
+                  class="text-brand-gold font-mono text-xs uppercase tracking-widest block mb-4"
+                  >Growth Engineering</span
+                >
+                <h3 class="text-2xl font-bold mb-4">Escala de Volume (+66%)</h3>
+                <p class="text-gray-400 text-sm italic mb-6">
+                  Redesenho da arquitetura frontend focada em SEO e Core Web
+                  Vitals, gerando impacto direto no volume de pedidos e
+                  performance orgânica.
+                </p>
+                <div class="h-[1px] w-full bg-white/10 my-6"></div>
+                <p class="text-xs text-gray-500">
+                  Tecnologias: SEO Semântico, UX/UI Performance, Analytics.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide p-4">
+              <div
+                class="bg-card-bg p-10 rounded-3xl border border-white/5 h-full"
+              >
+                <span
+                  class="text-brand-gold font-mono text-xs uppercase tracking-widest block mb-4"
+                  >Arquitetura VTEX</span
+                >
+                <h3 class="text-2xl font-bold mb-4">
+                  Migração Estratégica VTEX IO
+                </h3>
+                <p class="text-gray-400 text-sm italic mb-6">
+                  Liderança na migração crítica de infraestrutura legado para
+                  VTEX IO, garantindo continuidade operacional e 25% mais
+                  velocidade no checkout.
+                </p>
+                <div class="h-[1px] w-full bg-white/10 my-6"></div>
+                <p class="text-xs text-gray-500">
+                  Tecnologias: VTEX IO, Checkout Optimization, Webhooks.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination !static mt-12"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contato" class="py-24 border-t border-white/5 bg-black">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-8 italic tracking-tighter">
+          Sua operação precisa de <br /><span class="text-brand-gold"
+            >Maturidade Técnica?</span
+          >
+        </h2>
+        <p class="text-gray-500 mb-12 max-w-lg mx-auto italic">
+          Unindo Engenharia de Software e Gestão de Produto para entregar
+          resultados que aparecem no faturamento.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+          <a
+            href="https://wa.me/5584999043539"
+            class="bg-brand-gold text-black px-12 py-5 rounded-2xl font-bold hover:scale-105 transition shadow-2xl shadow-brand-gold/10"
+          >
+            Iniciar Consultoria Técnica
+          </a>
+          <a
+            href="JonathanCosta_Curriculo.pdf"
+            download
+            class="border border-white/10 px-12 py-5 rounded-2xl font-bold hover:bg-white/5 transition"
+          >
+            Download Executive CV
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      new Swiper(".recSwiper", {
+        slidesPerView: 1.1,
+        spaceBetween: 20,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        breakpoints: {
+          768: { slidesPerView: 2.2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    </script>
+  </body>
+</html>

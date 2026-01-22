@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Jonathan Costa | Engenheiro de Software | E-commerce Specialist
-    </title>
+    <title>Jonathan Costa | Software Engineer | Product Specialist</title>
     <link
       rel="icon"
       href="./assets/icon/favicon_white.svg"
@@ -15,110 +13,137 @@
     <style>
       .bg-custom {
         background:
-          linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-          url("./assets/img/bg.png"); /* Sua foto profissional */
+          linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+          url("./assets/img/bg.png");
         background-size: cover;
         background-position: center;
         min-height: 100vh;
       }
       .glass {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .text-gradient {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     </style>
   </head>
-  <body class="bg-black text-white font-sans">
+  <body class="bg-black text-white font-sans overflow-x-hidden">
     <div class="bg-custom flex flex-col items-center justify-center px-6 py-12">
-      <div class="mb-8 text-center">
-        <div
-          class="w-32 h-32 rounded-full border-4 border-blue-500 mx-auto mb-4 overflow-hidden shadow-2xl"
-        >
-          <img
-            src="./assets/img/jdc_photo.jpg"
-            alt="Jonathan Costa"
-            class="w-full h-full object-cover"
-          />
+      <div class="mb-10 text-center">
+        <div class="relative w-36 h-36 mx-auto mb-6">
+          <div
+            class="absolute inset-0 bg-blue-500 blur-2xl opacity-20 animate-pulse"
+          ></div>
+          <div
+            class="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden shadow-2xl"
+          >
+            <img
+              src="./assets/img/jdc_photo.jpg"
+              alt="Jonathan Costa"
+              class="w-full h-full object-cover"
+            />
+          </div>
         </div>
-        <h1 class="text-3xl font-bold tracking-tight">Jonathan Costa</h1>
-        <p class="text-blue-400 font-medium">
-          Engenheiro de Software | E-commerce Specialist
+        <h1 class="text-4xl font-bold tracking-tighter mb-2 italic">
+          Jonathan Costa
+        </h1>
+        <p class="text-gray-400 font-medium tracking-wide uppercase text-xs">
+          Software Engineer <span class="mx-2 text-white/20">|</span> Product
+          Specialist <span class="mx-2 text-white/20">|</span> Solution
+          Architect
         </p>
       </div>
 
-      <p class="text-gray-300 mb-10 text-center max-w-sm">
-        Escolha a especialidade que deseja explorar:
+      <p class="text-gray-400 mb-12 text-center max-w-sm text-sm italic">
+        "Conectando a precisão da engenharia à estratégia de negócios para
+        escalar resultados."
       </p>
 
       <div class="w-full max-w-md space-y-4">
         <a
           href="/sou.html"
-          class="glass block p-6 rounded-2xl hover:border-green-500 transition-all transform hover:scale-105 group"
-          target="_blank"
+          class="glass block p-6 rounded-3xl hover:border-blue-500/50 transition-all transform hover:scale-[1.02] group"
         >
           <div class="flex items-center justify-between">
-            <div>
-              <h2 class="text-xl font-bold group-hover:text-green-400">
-                Quem Sou Eu?
+            <div class="max-w-[80%]">
+              <h2
+                class="text-xl font-bold group-hover:text-blue-400 transition"
+              >
+                Liderança & Trajetória
               </h2>
-              <p class="text-sm text-gray-400">
-                Minha trajetória e liderança profissional.
+              <p class="text-xs text-gray-500 mt-1 leading-relaxed">
+                Gestão de equipes multidisciplinares (+300 pessoas), vivência
+                internacional e impacto social.
               </p>
             </div>
-            <span class="text-2xl">👤</span>
+            <span class="text-2xl grayscale group-hover:grayscale-0 transition"
+              >👤</span
+            >
           </div>
         </a>
 
         <a
           href="/front.html"
-          class="glass block p-6 rounded-2xl hover:border-blue-500 transition-all transform hover:scale-105 group"
-          target="_blank"
+          class="glass block p-6 rounded-3xl hover:border-purple-500/50 transition-all transform hover:scale-[1.02] group"
         >
           <div class="flex items-center justify-between">
-            <div>
-              <h2 class="text-xl font-bold group-hover:text-blue-400">
-                Web Dev Frontend
+            <div class="max-w-[80%]">
+              <h2
+                class="text-xl font-bold group-hover:text-purple-400 transition"
+              >
+                Engenharia de Software
               </h2>
-              <p class="text-sm text-gray-400">
-                Next.js, React, TypeScript e Engenharia.
+              <p class="text-xs text-gray-500 mt-1 leading-relaxed">
+                Arquitetura Frontend robusta com Next.js, React e foco em
+                performance e escalabilidade de sistemas.
               </p>
             </div>
-            <span class="text-2xl">💻</span>
+            <span class="text-2xl grayscale group-hover:grayscale-0 transition"
+              >💻</span
+            >
           </div>
         </a>
 
         <a
           href="/commerce.html"
-          class="glass block p-6 rounded-2xl hover:border-purple-500 transition-all transform hover:scale-105 group"
-          target="_blank"
+          class="glass block p-6 rounded-3xl hover:border-yellow-500/50 transition-all transform hover:scale-[1.02] group"
         >
           <div class="flex items-center justify-between">
-            <div>
-              <h2 class="text-xl font-bold group-hover:text-purple-400">
-                Especialista E-commerce
+            <div class="max-w-[80%]">
+              <h2
+                class="text-xl font-bold group-hover:text-yellow-500 transition"
+              >
+                Produto & Estratégia
               </h2>
-              <p class="text-sm text-gray-400">
-                VTEX, Tray, Growth e Escala de Vendas.
+              <p class="text-xs text-gray-500 mt-1 leading-relaxed">
+                Visão de Product Owner e Product Manager aplicada ao E-commerce:
+                VTEX, Tray, Nuvemshop, Automação e ROI.
               </p>
             </div>
-            <span class="text-2xl">🛒</span>
+            <span class="text-2xl grayscale group-hover:grayscale-0 transition"
+              >🚀</span
+            >
           </div>
         </a>
       </div>
 
       <div
-        class="mt-12 flex space-x-6 grayscale opacity-70 hover:opacity-100 transition"
+        class="mt-16 flex space-x-8 text-[10px] uppercase tracking-[0.3em] text-gray-600"
       >
         <a
           href="https://www.linkedin.com/in/jonathanduartecosta/"
           target="_blank"
-          class="hover:scale-110 transition"
+          class="hover:text-white transition-colors"
           >LinkedIn</a
         >
         <a
           href="https://github.com/jonathandcosta"
           target="_blank"
-          class="hover:scale-110 transition"
+          class="hover:text-white transition-colors"
           >GitHub</a
         >
       </div>
