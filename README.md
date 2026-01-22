@@ -2,7 +2,7 @@ Neste projeto você vai encontrar o meu portifolio profissional completo, conten
 
 # Olá, eu sou Jonathan Costa 👋
 
-### Desenvolvedor Frontend | Especialista em E-commerce
+### Desenvolvedor Frontend | Especialista em E-commerce | Product Owner | Product Manager
 
 [cite_start]Sou um profissional com sólida experiência em gestão de equipes multidisciplinares e otimização de processos de e-commerce, atualmente cursando o 7º período de Ciência da Computação (UNP). Meu foco principal é o desenvolvimento de soluções tecnológicas que melhorem a eficiência operacional e a experiência do usuário.
 
