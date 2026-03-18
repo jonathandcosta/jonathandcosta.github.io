@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icon/favicon_blue.svg"
+      type="image/svg+xml"
+    />
+    <title>Jonathan Costa - Currículo Interativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+          margin: 0;
+        }
+        .no-print {
+          display: none;
+        }
+        .print-full {
+          width: 100%;
+        }
+      }
+      .hover-scale {
+        transition: transform 0.2s;
+      }
+      .hover-scale:hover {
+        transform: scale(1.02);
+      }
+      .skill-tag {
+        transition: all 0.3s;
+      }
+      .skill-tag:hover {
+        background: #2563eb;
+        color: white;
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 p-4 md:p-8">
+    <!-- Botões de Controle -->
+    <!-- <div class="max-w-4xl mx-auto mb-4 flex flex-wrap gap-3 no-print">
+      <button
+        onclick="window.print()"
+        class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition"
+      >
+        <i class="fas fa-print"></i> Imprimir / PDF
+      </button>
+      <button
+        onclick="toggleTheme()"
+        class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition"
+      >
+        <i class="fas fa-moon"></i> Alternar Tema
+      </button>
+      <a
+        onclick="downloadPDF()"
+        class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition"
+        href="./assets/curriculo_jonathan_costa.pdf"
+        download
+      >
+        <i class="fas fa-download"></i> Baixar PDF
+      </a>
+    </div> -->
+
+    <!-- Currículo Principal -->
+    <div
+      id="resume-container"
+      class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden transition-colors duration-300"
+    >
+      <!-- Header -->
+      <div
+        class="bg-gradient-to-r from-blue-800 to-purple-900 text-white px-6 md:px-8 py-6"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center"
+        >
+          <div>
+            <h1 class="text-3xl md:text-4xl font-bold">Jonathan D. Costa</h1>
+            <p class="text-blue-100 mt-1 text-lg">
+              E-commerce Specialist | Product Manager | Developer Frontend
+            </p>
+          </div>
+          <div class="mt-4 md:mt-0 flex gap-3">
+            <a href="#" class="text-white hover:text-blue-200 transition"
+              ><i class="fab fa-linkedin text-2xl"></i
+            ></a>
+            <a href="#" class="text-white hover:text-blue-200 transition"
+              ><i class="fab fa-github text-2xl"></i
+            ></a>
+            <a href="#" class="text-white hover:text-blue-200 transition"
+              ><i class="fas fa-globe text-2xl"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="flex flex-wrap gap-4 md:gap-6 mt-4 text-blue-100 border-t border-blue-700 pt-4"
+        >
+          <span class="flex items-center gap-2"
+            ><i class="fas fa-phone"></i> 84 9 9904-3539</span
+          >
+          <span class="flex items-center gap-2"
+            ><i class="fas fa-envelope"></i> jddatsoc@gmail.com</span
+          >
+          <span class="flex items-center gap-2"
+            ><i class="fas fa-map-marker-alt"></i> Natal - RN</span
+          >
+        </div>
+      </div>
+
+      <div class="p-6 md:p-8 space-y-6" id="resume-content">
+        <!-- Objetivo (expansível) -->
+        <section class="border rounded-lg overflow-hidden hover-scale">
+          <div
+            onclick="toggleSection('objetivo')"
+            class="bg-gray-50 px-4 py-3 flex justify-between items-center cursor-pointer"
+          >
+            <h2 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+              <i class="fas fa-bullseye text-blue-600"></i> OBJETIVO
+              PROFISSIONAL
+            </h2>
+            <i
+              class="fas fa-chevron-down transition-transform"
+              id="icon-objetivo"
+            ></i>
+          </div>
+          <div id="objetivo" class="p-4 border-t">
+            <p class="text-gray-700">
+              Tecnologia da Informação com foco em Arquitetura de E-commerce e
+              Integrações de Sistemas (ERP, CRM, Marketing), Desenvolvimento
+              Web, Liderança e gestão de projetos.
+            </p>
+          </div>
+        </section>
+
+        <!-- Sumário Executivo -->
+        <section class="border rounded-lg overflow-hidden hover-scale">
+          <div
+            onclick="toggleSection('sumario')"
+            class="bg-gray-50 px-4 py-3 flex justify-between items-center cursor-pointer"
+          >
+            <h2 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+              <i class="fas fa-chart-line text-blue-600"></i> SUMÁRIO EXECUTIVO
+            </h2>
+            <i
+              class="fas fa-chevron-down transition-transform"
+              id="icon-sumario"
+            ></i>
+          </div>
+          <div id="sumario" class="p-4 border-t">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <h3 class="font-semibold text-blue-800 mb-2">
+                  📊 Gestão & Resultados
+                </h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                  <li>
+                    Relatórios para Diretoria e Administração de E-Commerce
+                  </li>
+                  <li>Gestão de equipes de 300+ pessoas</li>
+                  <li>Power BI, Excel, Google Analytics, GA4</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-semibold text-blue-800 mb-2">
+                  💻 Tecnologia & Desenvolvimento
+                </h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                  <li>VTEX IO, Tray, React, Next.js, TypeScript</li>
+                  <li>Integrações ERP (Winthor, Totvs) e CRM</li>
+                  <li>SEO Técnico e Otimização de Performance</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+              <p class="text-sm">
+                <span class="font-semibold">🌎 Experiência Internacional:</span>
+                Trabalho conjunto com Norte Americanos, Peruanos, Mexicanos,
+                Argentinos e Bolivianos. Vivência de 8 meses nos EUA.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Formação Acadêmica (timeline interativa) -->
+        <section class="border rounded-lg overflow-hidden hover-scale">
+          <div
+            onclick="toggleSection('formacao')"
+            class="bg-gray-50 px-4 py-3 flex justify-between items-center cursor-pointer"
+          >
+            <h2 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+              <i class="fas fa-graduation-cap text-blue-600"></i> FORMAÇÃO
+              ACADÊMICA
+            </h2>
+            <i
+              class="fas fa-chevron-down transition-transform"
+              id="icon-formacao"
+            ></i>
+          </div>
+          <div id="formacao" class="p-4 border-t">
+            <div
+              class="space-y-4 relative before:absolute before:left-4 before:top-0 before:h-full before:w-0.5 before:bg-blue-200"
+            >
+              <div class="relative pl-10">
+                <div
+                  class="absolute left-2 w-4 h-4 bg-blue-600 rounded-full mt-1"
+                ></div>
+                <div class="flex justify-between">
+                  <span class="font-medium">English Connect 3</span>
+                  <span class="text-gray-600 text-sm">Dez 2026</span>
+                </div>
+                <p class="text-gray-600 text-sm">
+                  BYU Pathway, Provo, Utah, EUA
+                </p>
+              </div>
+              <div class="relative pl-10">
+                <div
+                  class="absolute left-2 w-4 h-4 bg-blue-600 rounded-full mt-1"
+                ></div>
+                <div class="flex justify-between">
+                  <span class="font-medium"
+                    >Bacharelado em Ciência da Computação</span
+                  >
+                  <span class="text-gray-600 text-sm">Dez 2025</span>
+                </div>
+                <p class="text-gray-600 text-sm">
+                  UNP – Universidade Potiguar, Natal, RN
+                </p>
+              </div>
+              <div class="relative pl-10">
+                <div
+                  class="absolute left-2 w-4 h-4 bg-blue-600 rounded-full mt-1"
+                ></div>
+                <div class="flex justify-between">
+                  <span class="font-medium">Engenheiro Front End</span>
+                  <span class="text-gray-600 text-sm">Mai 2024</span>
+                </div>
+                <p class="text-gray-600 text-sm">
+                  EBAC, São Paulo, SP (2 anos)
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experiência Profissional com abas -->
+        <section class="border rounded-lg overflow-hidden">
+          <div class="bg-gray-50 px-4 py-3">
+            <h2 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+              <i class="fas fa-briefcase text-blue-600"></i> EXPERIÊNCIA
+              PROFISSIONAL
+            </h2>
+          </div>
+          <div class="p-4 border-t">
+            <!-- Abas de navegação -->
+            <div class="flex flex-wrap gap-2 mb-4 no-print">
+              <button
+                onclick="showExperience('supergiro')"
+                class="tab-btn active bg-blue-600 text-white px-3 py-1 rounded-full text-sm"
+              >
+                Super Giro
+              </button>
+              <button
+                onclick="showExperience('crc')"
+                class="tab-btn bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-full text-sm"
+              >
+                CRC RN
+              </button>
+              <button
+                onclick="showExperience('brazz')"
+                class="tab-btn bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-full text-sm"
+              >
+                Brazz Brazz
+              </button>
+              <button
+                onclick="showExperience('atacado')"
+                class="tab-btn bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-full text-sm"
+              >
+                Atacado Lojista
+              </button>
+              <button
+                onclick="showExperience('maranguape')"
+                class="tab-btn bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-full text-sm"
+              >
+                Maranguape
+              </button>
+              <button
+                onclick="showExperience('royal')"
+                class="tab-btn bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-full text-sm"
+              >
+                Royal
+              </button>
+            </div>
+
+            <!-- Super Giro -->
+            <div id="supergiro" class="experience-content hidden">
+              <div class="flex justify-between items-start">
+                <h3 class="text-lg font-semibold">
+                  PM | Supervisor de E-Commerce
+                </h3>
+                <span
+                  class="text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded"
+                  >Mai 2024 – Mar 2026</span
+                >
+              </div>
+              <p class="text-gray-700 font-medium">Super Giro, Macapá, AP</p>
+              <div class="grid md:grid-cols-2 gap-4 mt-2">
+                <div>
+                  <h4 class="font-semibold text-blue-700 text-sm">
+                    📈 Resultados
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      Impulsionei o crescimento das vendas através de uma
+                      presença otimizada e automatizada em múltiplos canais
+                      simultâneos.
+                    </li>
+                    <li>
+                      Substituí rotinas manuais por fluxos automatizados,
+                      permitindo que a operação escalasse sem a necessidade de
+                      aumento de headcount.
+                    </li>
+                    <li>
+                      Alcancei 100% de acuracidade na transmissão de informações
+                      entre o ERP e a NuvemShop, eliminando erros manuais de
+                      digitação.
+                    </li>
+                    <li>
+                      Reduzi drasticamente o tempo entre o recebimento da
+                      mercadoria e a ativação dos anúncios nos marketplaces.
+                    </li>
+                    <li>
+                      Mitiguei perdas financeiras causadas por falhas sistêmicas
+                      e duplicidade de processos através de uma infraestrutura
+                      robusta.
+                    </li>
+                    <li>
+                      Implementei dashboards que garantiram à diretoria a visão
+                      clara do ROI (Retorno sobre Investimento) e performance
+                      por canal.
+                    </li>
+                    <li>
+                      Elevei a qualidade técnica dos anúncios, melhorando o
+                      ranqueamento orgânico e a taxa de clique dentro da Amazon
+                      e Mercado Livre.
+                    </li>
+                    <li>
+                      Preparei a infraestrutura técnica para suportar picos de
+                      tráfego e volume de pedidos sem instabilidades nos
+                      sistemas integrados.
+                    </li>
+                    <li>
+                      Otimizei as metatags e descrições de produtos na
+                      NuvemShop, reduzindo a dependência exclusiva de tráfego
+                      pago para conversão.
+                    </li>
+                    <li>
+                      Transformei uma operação frágil e manual em um modelo
+                      consistente, fluido e preparado para expansão nacional.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-blue-700 text-sm">🛠️ Ações</h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      Atuei em alinhamento direto com o CEO para definição de
+                      roteiros estratégicos e tradução de metas de negócio em
+                      requisitos técnicos.
+                    </li>
+                    <li>
+                      Estruturei o backlog de demandas e o roteiro de execução,
+                      garantindo transparência e priorização de tarefas de alto
+                      impacto.
+                    </li>
+                    <li>
+                      Orquestrei a conexão técnica entre os ERPs (Eco Centauro e
+                      Bling) e a plataforma NuvemShop, garantindo o fluxo
+                      contínuo de dados.
+                    </li>
+                    <li>
+                      Gerenciei a presença e os anúncios da marca nos principais
+                      players do mercado (Amazon, Shopee e Mercado Livre),
+                      padronizando a comunicação.
+                    </li>
+                    <li>
+                      Implementei processos automatizados para o cadastro
+                      massivo de produtos, incluindo tratamento de imagens,
+                      precificação dinâmica e descrições técnicas.
+                    </li>
+                    <li>
+                      Identifiquei e corrigi pontos de falha em sistemas
+                      inoperantes que causavam rupturas de estoque e atrasos no
+                      faturamento.
+                    </li>
+                    <li>
+                      Configurei do zero o ecossistema de dados com Google Tag
+                      Manager (GTM) e Google Analytics 4 (GA4) para
+                      monitoramento de funil.
+                    </li>
+                    <li>
+                      Mapeei e otimizei os fluxos operacionais, reduzindo a
+                      necessidade de intervenção humana na transição de pedidos
+                      entre canais.
+                    </li>
+                    <li>
+                      Estabeleci regras de sincronização entre o estoque físico
+                      e os múltiplos canais de venda para mitigar o risco de
+                      overselling.
+                    </li>
+                    <li>
+                      Capacitei o time operacional no uso das novas ferramentas
+                      e fluxos integrados, promovendo o aculturamento digital da
+                      empresa.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div id="crc" class="experience-content hidden">
+              <div class="flex justify-between items-start">
+                <h3 class="text-lg font-semibold">Estágio</h3>
+                <span
+                  class="text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded"
+                  >Jun 2025 – Dez 2025</span
+                >
+              </div>
+              <p class="text-gray-700 font-medium">
+                Conselho Regional de Contabilidade do RN, Natal, RN
+              </p>
+              <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-700">
+                <li>
+                  Desenvolvi um bot para automação de envios de e-mails via
+                  Outlook
+                </li>
+                <li>
+                  Manutenção e monitoramento de servidores locais (99% de
+                  disponibilidade)
+                </li>
+                <li>Gestão de hardware, software e suporte a usuários</li>
+              </ul>
+            </div>
+
+            <!-- BRAZZ BRAZZ PAPELARIA -->
+            <div id="brazz" class="experience-content hidden">
+              <div class="flex justify-between items-start">
+                <h3 class="text-lg font-semibold">
+                  PM | Supervisor de E-Commerce
+                </h3>
+                <span
+                  class="text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded"
+                  >Mai 2024 – Mar 2026</span
+                >
+              </div>
+              <p class="text-gray-700 font-medium">
+                Brazz Brazz Papelaria, Belém, PA
+              </p>
+              <div class="grid md:grid-cols-2 gap-4 mt-2">
+                <div>
+                  <h4 class="font-semibold text-blue-700 text-sm">
+                    📈 Resultados
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      Mais que dobrei o faturamento anual da empresa em apenas
+                      18 meses de gestão direta.
+                    </li>
+                    <li>
+                      Alcancei um crescimento impressionante de 74,52% no
+                      faturamento acumulado de 2025 em comparação ao ano
+                      anterior.
+                    </li>
+                    <li>
+                      Bati o recorde histórico mensal da operação em janeiro de
+                      2025, atingindo 75% do faturamento anterior (um salto
+                      massivo em relação à média inicial).
+                    </li>
+                    <li>
+                      Concluí a transição de plataforma mantendo a estabilidade
+                      de vendas e preservando o tráfego orgânico através de SEO
+                      técnico.
+                    </li>
+                    <li>
+                      Indexação e governança de mais de 10,4 mil produtos no
+                      Google Merchant Center, maximizando a visibilidade em
+                      buscas orgânicas.
+                    </li>
+                    <li>
+                      Transformei uma operação 100% manual em um ecossistema que
+                      funciona 90% de forma automatizada, integrando vendas,
+                      logistica e financeiro.
+                    </li>
+                    <li>
+                      Registrei um crescimento de 34,87% já no primeiro ano de
+                      atuação (2024 vs 2023).
+                    </li>
+                    <li>
+                      Mantive faturamentos superior aos esperados com a
+                      transição de sistema, superando todos os históricos
+                      anteriores da empresa.
+                    </li>
+                    <li>
+                      Redução de custos fixos de plataforma através da migração
+                      estratégica, aumentando a margem de contribuição do
+                      e-commerce.
+                    </li>
+                    <li>
+                      Elevação do tempo de permanência e redução da taxa de
+                      rejeição através das melhorias estruturais de UX/UI
+                      implementadas.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-blue-700 text-sm">🛠️ Ações</h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      Realizei o mapeamento completo das dores do negócio junto
+                      ao C-Level, traduzindo necessidades comerciais em um
+                      roadmap estratégico de produto.
+                    </li>
+                    <li>
+                      Implementei a gestão via Trello para organizar a operação
+                      diária, priorizando demandas técnicas e de marketing para
+                      escala acelerada.
+                    </li>
+                    <li>
+                      Planejei e executei integralmente a migração da plataforma
+                      VTEX para Tray, visando otimização de custos e maior
+                      agilidade operacional.
+                    </li>
+                    <li>
+                      Configurei do zero a stack de inteligência de dados,
+                      incluindo Google Analytics (GA4), Tag Manager e Google
+                      Merchant Center.
+                    </li>
+                    <li>
+                      Desenhei a estratégia de redirecionamento 301 para
+                      preservação da autoridade orgânica durante a migração de
+                      plataforma.
+                    </li>
+                    <li>
+                      Liderei a estruturação e higienização de dados para mais
+                      de 9.950 SKUs, incluindo padronização de imagens,
+                      metadados e descrições técnicas.
+                    </li>
+                    <li>
+                      Configurei integrações com transportadoras (J&T) e
+                      automatizei regras de frete dinâmico por região para
+                      melhorar a competitividade.
+                    </li>
+                    <li>
+                      Implementei fluxos automatizados de e-mail marketing via
+                      Brevo, focando em nutrição de leads e recuperação de
+                      carrinhos abandonados.
+                    </li>
+                    <li>
+                      Reestruturei o layout e a usabilidade do site, focando na
+                      redução de fricção e melhoria da experiência de compra
+                      mobile.
+                    </li>
+                    <li>
+                      Atuei de forma autônoma na resolução de incidentes de TI e
+                      design, garantindo a continuidade do site sem dependência
+                      de terceiros.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- ATACADO DO LOJISTA -->
+            <div id="atacado" class="experience-content hidden">
+              <div class="flex justify-between items-start">
+                <h3 class="text-lg font-semibold">
+                  PM | Supervisor de E-Commerce
+                </h3>
+                <span
+                  class="text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded"
+                  >Mai 2023 – Mar 2024</span
+                >
+              </div>
+              <p class="text-gray-700 font-medium">
+                Atacado do Lojista, Natal, RN
+              </p>
+              <div class="grid md:grid-cols-2 gap-4 mt-2">
+                <div>
+                  <h4 class="font-semibold text-blue-700 text-sm">
+                    📈 Resultados
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      Alavancagem real da receita mensal de +400% através de
+                      automação e estratégias de Growth.
+                    </li>
+                    <li>
+                      Automação de 90% dos processos do e-commerce, eliminando
+                      intervenções manuais na transmissão de dados para o ERP
+                    </li>
+                    <li>
+                      Redução estratégica de R$ 35 mil por ano em custos fixos
+                      através da migração de plataforma e renegociação com
+                      parceiros.
+                    </li>
+                    <li>
+                      Redução de 35% no CAC através de uma gestão de tráfego
+                      pago orientada a dados.
+                    </li>
+                    <li>
+                      Elevação de 65% no valor médio das vendas através de
+                      estratégias de cross-selling e otimização do mix de
+                      produtos.
+                    </li>
+                    <li>
+                      Redução do prazo de entrega de 7 para 2 dias, viabilizando
+                      a operação em nível nacional com logística totalmente
+                      integrada.
+                    </li>
+                    <li>
+                      Aumento de 200% nas visitas ao site devido à
+                      reestruturação de SEO e qualificação técnica da
+                      plataforma.
+                    </li>
+                    <li>
+                      Incremento de 30% na conversão final do checkout através
+                      de melhorias em UX/UI e usabilidade.
+                    </li>
+                    <li>
+                      Transição de uma vitrine de 3.000 para a exposição
+                      eficiente e automatizada de 40.000 SKUs.
+                    </li>
+                    <li>
+                      Implementação de dashboards de BI que garantiram
+                      visibilidade total de métricas críticas (ROI e LTV) para a
+                      diretoria.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-blue-700 text-sm">🛠️ Ações</h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      Traduzi as metas de faturamento da diretoria em um roadmap
+                      técnico executável, priorizando o backlog de
+                      desenvolvimento com foco em ROI.
+                    </li>
+                    <li>
+                      Liderei a migração crítica da plataforma VTEX para Tray,
+                      garantindo a integridade dos dados e a continuidade
+                      operacional.
+                    </li>
+                    <li>
+                      Projetei a integração nativa entre o e-commerce e o ERP
+                      Totvs Winthor, automatizando o fluxo de pedidos, estoque e
+                      faturamento.
+                    </li>
+                    <li>
+                      Gerenciei times de Marketing, TI, Logística e Vendas,
+                      aplicando metodologias ágeis e ritos de gestão à vista.
+                    </li>
+                    <li>
+                      Configurei e integrei ferramentas de inteligência (GA4,
+                      GTM, RD Station e Meta API) para suporte à tomada de
+                      decisão baseada em evidências.
+                    </li>
+                    <li>
+                      Desenvolvi e validei testes A/B para elementos de design,
+                      copywriting e call-to-actions, refinando a jornada de
+                      compra do usuário.
+                    </li>
+                    <li>
+                      Desenhei o novo funil de vendas para os canais de WhatsApp
+                      e Televendas, integrando o atendimento humano à agilidade
+                      do digital.
+                    </li>
+                    <li>
+                      Implementei melhorias na arquitetura de informação e
+                      metadados para os 40.000 SKUs, qualificando o site para
+                      algoritmos de busca.
+                    </li>
+                    <li>
+                      Realizei a gestão de contratos com plataformas SaaS e
+                      parceiros logísticos, otimizando custos de frete e taxas
+                      de transação.
+                    </li>
+                    <li>
+                      Implementei sistemas de antifraude e validação
+                      automatizada de dados PJ/PF, mitigando riscos e perdas
+                      financeiras.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- COMERCIAL MARANGUAPE -->
+            <div id="maranguape" class="experience-content hidden">
+              <div class="flex justify-between items-start">
+                <h3 class="text-lg font-semibold">
+                  Auxiliar de Desenvolvimento Frontend
+                </h3>
+                <span
+                  class="text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded"
+                  >Out 2022 – Mai 2023</span
+                >
+              </div>
+              <p class="text-gray-700 font-medium">
+                Comercial Maranguape, Natal, RN
+              </p>
+              <div class="grid md:grid-cols-2 gap-4 mt-2">
+                <div>
+                  <h4 class="font-semibold text-blue-700 text-sm">
+                    📈 Resultados
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      Melhoria direta nas vendas através da eliminação de erros
+                      sistêmicos durante a jornada de compra do cliente.
+                    </li>
+                    <li>
+                      Otimização do tempo de carregamento do fluxo final,
+                      impactando positivamente o fechamento de pedidos.
+                    </li>
+                    <li>
+                      Elevação dos índices de performance e estabilidade visual
+                      medidos pelas ferramentas de auditoria do Google.
+                    </li>
+                    <li>
+                      Diminuição drástica no volume de chamados internos
+                      relacionados a bugs de plataforma e erros de integração.
+                    </li>
+                    <li>
+                      Maior agilidade no lançamento de novas campanhas e
+                      produtos devido à automação do cadastro.
+                    </li>
+                    <li>
+                      Resgate de vendas que seriam perdidas devido a falhas em
+                      métodos de pagamento ou cálculos de frete incorretos.
+                    </li>
+                    <li>
+                      Aumento da visibilidade do e-commerce nos mecanismos de
+                      busca após a reestruturação técnica de SEO.
+                    </li>
+                    <li>
+                      Garantia de 100% de acuracidade entre os dados do
+                      inventário e a disponibilidade real no site.
+                    </li>
+                    <li>
+                      Economia de horas mensais de trabalho da equipe comercial
+                      através da substituição de processos manuais por soluções
+                      digitais.
+                    </li>
+                    <li>
+                      RMelhoria na percepção de marca refletida por uma
+                      navegação fluida, segura e livre de interrupções técnicas.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-blue-700 text-sm">🛠️ Ações</h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      Traduzi as necessidades do time comercial em
+                      especificações técnicas para implementação direta na
+                      plataforma VTEX.
+                    </li>
+                    <li>
+                      Atuei no ajuste e criação de componentes visuais para
+                      melhorar a interface e a navegabilidade da loja.
+                    </li>
+                    <li>
+                      Identifiquei e corrigi falhas no fluxo de checkout e no
+                      carrinho, reduzindo a taxa de abandono por erros técnicos.
+                    </li>
+                    <li>
+                      Gerenciei a parametrização de módulos de logística,
+                      promoções e gateways de pagamento dentro do ecossistema
+                      VTEX.
+                    </li>
+                    <li>
+                      Desenvolvi scripts e processos para automatizar tarefas
+                      repetitivas de atualização de preços e estoque.
+                    </li>
+                    <li>
+                      Estruturei metadados, URLs amigáveis e hierarquia de tags
+                      para potencializar o ranqueamento orgânico dos produtos.
+                    </li>
+                    <li>
+                      Atuei como ponto focal entre as áreas de vendas e
+                      tecnologia para agilizar a resolução de incidentes na
+                      plataforma.
+                    </li>
+                    <li>
+                      Reorganizei a estrutura de catálogo e imagens para
+                      garantir um carregamento mais rápido e uma vitrine
+                      padronizada.
+                    </li>
+                    <li>
+                      Realizei testes de fumaça e validações de usabilidade em
+                      novas funcionalidades antes da publicação em ambiente de
+                      produção.
+                    </li>
+                    <li>
+                      Criei manuais e guias técnicos para capacitar a equipe
+                      comercial no uso eficiente das ferramentas administrativas
+                      da VTEX.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div id="royal" class="experience-content hidden">
+              <div class="flex justify-between items-start">
+                <h3 class="text-lg font-semibold">
+                  PM | Supervisor de E-Commerce
+                </h3>
+                <span
+                  class="text-gray-600 text-sm bg-gray-100 px-2 py-1 rounded"
+                  >Mai 2023 – Mar 2024</span
+                >
+              </div>
+              <p class="text-gray-700 font-medium">
+                Atacado do Lojista, Natal, RN
+              </p>
+              <div class="grid md:grid-cols-2 gap-4 mt-2">
+                <div>
+                  <h4 class="font-semibold text-blue-700 text-sm">
+                    📈 Resultados
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>...</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-blue-700 text-sm">🛠️ Ações</h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>...</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Habilidades Técnicas (tags interativas) -->
+        <section class="border rounded-lg overflow-hidden">
+          <div class="bg-gray-50 px-4 py-3">
+            <h2 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+              <i class="fas fa-code text-blue-600"></i> HABILIDADES TÉCNICAS
+            </h2>
+          </div>
+          <div class="p-4 border-t">
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >VTEX IO</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >NuvemShop</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >Shopify</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >Tray</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >React</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >Next.js</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >TypeScript</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >Tailwind</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >Power BI</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >ERP-Winthor</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >CRM</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >IA</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >Suri</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >RD Station</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >Google Analytics</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >SEO</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >Figma</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >Trello</span
+              >
+              <span
+                class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer"
+                >Ageis</span
+              >
+            </div>
+
+            <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
+              <p class="text-sm flex items-center gap-2">
+                <i class="fas fa-star text-yellow-500"></i>
+                <span
+                  ><strong>Diferenciais:</strong> Integrações ERP/CRM, Automação
+                  de Marketing, SEO Técnico, Metodologias Ágeis
+                  (Scrum/Kanban)</span
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Informações Suplementares -->
+        <section class="border rounded-lg overflow-hidden">
+          <div class="bg-gray-50 px-4 py-3">
+            <h2 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+              <i class="fas fa-info-circle text-blue-600"></i> INFORMAÇÕES
+              SUPLEMENTARES
+            </h2>
+          </div>
+          <div class="p-4 border-t">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <h3 class="font-semibold text-blue-800 mb-2">
+                  🏅 Voluntariado
+                </h3>
+                <ul class="list-disc pl-5 text-gray-700">
+                  <li>Presidente Voluntário LDS (desde 2002)</li>
+                  <li>Facilitador de Desenvolvimento Profissional</li>
+                  <li>Coordenador "Mãos que Ajudam"</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-semibold text-blue-800 mb-2">
+                  📜 Certificações
+                </h3>
+                <ul class="list-disc pl-5 text-gray-700">
+                  <li>Engenharia Front-end (EBAC 2024)</li>
+                  <li>Inteligência Artificial Aplicada (EBAC 2024)</li>
+                  <li>Desenvolvimento Front-end (Origamid 2023)</li>
+                  <li>Técnica Avançada de Vendas (Thiago Concer 2018)</li>
+                  <li>Inteligência Emocional (Febracis 2017)</li>
+                  <li>CNH Categoria AB</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <div
+        class="bg-gray-100 px-6 py-4 text-center text-sm text-gray-600 flex justify-between items-center"
+      >
+        <span>📄 Currículo Digital - Jonathan D. Costa</span>
+        <span class="no-print">🔄 Atualizado em Março 2026</span>
+      </div>
+    </div>
+
+    <script>
+      // Alternar seções (expandir/recolher)
+      function toggleSection(id) {
+        const content = document.getElementById(id);
+        const icon = document.getElementById("icon-" + id);
+
+        if (content.classList.contains("hidden")) {
+          content.classList.remove("hidden");
+          icon.classList.remove("fa-chevron-down");
+          icon.classList.add("fa-chevron-up");
+        } else {
+          content.classList.add("hidden");
+          icon.classList.remove("fa-chevron-up");
+          icon.classList.add("fa-chevron-down");
+        }
+      }
+
+      // Alternar experiências por abas
+      function showExperience(id) {
+        // Esconde todos os conteúdos
+        document.querySelectorAll(".experience-content").forEach((el) => {
+          el.classList.add("hidden");
+        });
+
+        // Mostra o conteúdo selecionado
+        document.getElementById(id).classList.remove("hidden");
+
+        // Atualiza estilo dos botões
+        document.querySelectorAll(".tab-btn").forEach((btn) => {
+          btn.classList.remove("bg-blue-600", "text-white");
+          btn.classList.add("bg-gray-200");
+        });
+
+        event.target.classList.remove("bg-gray-200");
+        event.target.classList.add("bg-blue-600", "text-white");
+      }
+
+      // Alternar tema claro/escuro
+      function toggleTheme() {
+        const container = document.getElementById("resume-container");
+        const content = document.getElementById("resume-content");
+
+        if (container.classList.contains("bg-white")) {
+          container.classList.remove("bg-white");
+          container.classList.add("bg-gray-900", "text-gray-200");
+          content.classList.add("text-gray-200");
+
+          // Ajusta cores dos textos
+          document
+            .querySelectorAll(".text-gray-700, .text-gray-600")
+            .forEach((el) => {
+              el.classList.remove("text-gray-700", "text-gray-600");
+              el.classList.add("text-gray-300");
+            });
+        } else {
+          container.classList.remove("bg-gray-900", "text-gray-200");
+          container.classList.add("bg-white");
+          content.classList.remove("text-gray-200");
+
+          document.querySelectorAll(".text-gray-300").forEach((el) => {
+            el.classList.remove("text-gray-300");
+            el.classList.add("text-gray-700");
+          });
+        }
+      }
+
+      // Download como PDF
+      function downloadPDF() {
+        window.print();
+      }
+
+      // Inicializar com primeira seção aberta
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mostra primeira experiência por padrão
+        document.getElementById("supergiro").classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>
